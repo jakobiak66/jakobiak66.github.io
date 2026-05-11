@@ -12,7 +12,7 @@ import Wohnraumlueftung from "./routes/leistungen.wohnraumlueftung";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/christ-berlin">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ueber-uns" element={<UeberUns />} />

@@ -21,7 +21,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/heizung-sanitaer-adamek">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />

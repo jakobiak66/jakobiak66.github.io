@@ -9,7 +9,7 @@ import Datenschutz from "./routes/datenschutz";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/goldschmiede-cifci">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/leistungen" element={<Leistungen />} />
