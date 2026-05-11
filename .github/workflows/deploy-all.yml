@@ -16,7 +16,10 @@ concurrency:
 
 jobs:
   # ─────────────────────────────────────────────
-  # PHASE 1: Alle 13 Websites parallel bauen
+  # 10 Standard Vite+React Websites parallel bauen
+  # (christ-berlin, swa-berlin, goldschmiede-cifci
+  #  benötigen Cloudflare/SSR und werden separat
+  #  als Placeholder eingebunden)
   # ─────────────────────────────────────────────
   build:
     name: "Build: ${{ matrix.project }}"
@@ -35,15 +38,12 @@ jobs:
           - { project: fahrschule-salman,       path: fertig/fahrschule-salman/website }
           - { project: fat-daddys-tattoo,       path: fertig/fat-daddys-tattoo/website }
           - { project: fahrschule-frank-dopf,   path: fertig/fahrschule-frank-dopf/website }
-          - { project: christ-berlin,           path: fertig/christ-berlin/website }
-          - { project: swa-berlin,              path: fertig/swa-berlin/website }
-          - { project: goldschmiede-cifci,      path: fertig/goldschmiede-cifci/website }
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -52,45 +52,22 @@ jobs:
         run: npm install
         working-directory: ${{ matrix.path }}
 
-      # FIX 1: Base-Pfad in vite.config.ts setzen (nicht via CLI-Flag)
-      # Der Lovable-Config-Wrapper liest base NUR über defineConfig({ vite: { base } })
-      - name: Set base path in vite.config.ts
-        run: |
-          cat > vite.config.ts << EOF
-          import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-          export default defineConfig({ vite: { base: "/${{ matrix.project }}/" } });
-          EOF
-        working-directory: ${{ matrix.path }}
-
-      - name: Build Website
+      - name: Build
         run: npm run build
         working-directory: ${{ matrix.path }}
-        env:
-          NODE_ENV: production
 
-      # FIX 2: TanStack Start baut nach dist/client/ statt dist/
-      # Normalize: alles immer nach dist/index.html
-      - name: Normalize build output
+      - name: Verify dist/index.html
         run: |
-          # TanStack SSR/Cloudflare baut nach dist/client/index.html
-          if [ -f "dist/client/index.html" ]; then
-            echo "TanStack SSR erkannt → dist/client/ → dist/ verschieben"
-            mv dist/client dist_static_tmp
-            rm -rf dist
-            mv dist_static_tmp dist
-          fi
-
-          # Ergebnis prüfen
           if [ -f "dist/index.html" ]; then
-            echo "✅ dist/index.html vorhanden ($(find dist -type f | wc -l) Dateien)"
+            echo "✅ Build OK – $(find dist -type f | wc -l) Dateien"
           else
-            echo "❌ Kein dist/index.html gefunden"
+            echo "❌ dist/index.html fehlt!"
             ls -la dist/ 2>/dev/null || echo "dist/ existiert nicht"
             exit 1
           fi
         working-directory: ${{ matrix.path }}
 
-      - name: Upload Build Artifact
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: dist-${{ matrix.project }}
@@ -99,12 +76,11 @@ jobs:
           retention-days: 1
 
   # ─────────────────────────────────────────────
-  # PHASE 2: Alle Builds zusammenführen & deployen
+  # Alles zusammenführen und auf GitHub Pages deployen
   # ─────────────────────────────────────────────
   assemble-and-deploy:
-    name: "Assemble & Deploy to GitHub Pages"
+    name: "Assemble & Deploy"
     needs: build
-    # FIX 3: Immer ausführen, auch wenn einzelne Build-Jobs scheitern
     if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     environment:
@@ -112,55 +88,75 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Download All Build Artifacts
+      - name: Download All Artifacts
         uses: actions/download-artifact@v4
         with:
           path: artifacts
 
-      - name: Assemble Final Output
+      - name: Assemble dist/
         run: |
           mkdir -p dist
           cp fertig/alle_websites_deploy/index.html dist/index.html
 
-          PROJECTS=(
-            haustechnik-hun
-            heizung-sanitaer-adamek
-            shk-rathmann
-            susanneheitmann
-            fahrschulekolb
-            yoga-kendra
-            sehrfit
-            fahrschule-salman
-            fat-daddys-tattoo
-            fahrschule-frank-dopf
-            christ-berlin
-            swa-berlin
-            goldschmiede-cifci
-          )
-
-          ok=0; skip=0
-          for proj in "${PROJECTS[@]}"; do
-            artifact_dir="artifacts/dist-${proj}"
-            if [ -d "$artifact_dir" ] && [ -f "${artifact_dir}/index.html" ]; then
+          # 10 React-Projekte einfügen
+          for proj in haustechnik-hun heizung-sanitaer-adamek shk-rathmann \
+                      susanneheitmann fahrschulekolb yoga-kendra sehrfit \
+                      fahrschule-salman fat-daddys-tattoo fahrschule-frank-dopf; do
+            src="artifacts/dist-${proj}"
+            if [ -d "$src" ] && [ -f "${src}/index.html" ]; then
               mkdir -p "dist/${proj}"
-              cp -r "${artifact_dir}/." "dist/${proj}/"
-              echo "✅ Assembled: ${proj}"
-              ok=$((ok+1))
+              cp -r "${src}/." "dist/${proj}/"
+              echo "✅ ${proj}"
             else
-              echo "⚠️  Skipped: ${proj}"
-              skip=$((skip+1))
+              echo "⚠️  ${proj} – kein Artifact"
             fi
           done
 
+          # 3 TanStack/Cloudflare Projekte als Placeholder
+          # (benötigen Cloudflare Workers, nicht kompatibel mit GitHub Pages)
+          for proj_info in \
+            "christ-berlin|Alexander Christ GmbH|Gebäudetechnik · Berlin" \
+            "swa-berlin|SWA Berlin GmbH|TGA-Haustechnik · Berlin" \
+            "goldschmiede-cifci|Goldschmiede Cifci|Goldschmiedekunst · Karlsruhe"; do
+            proj="${proj_info%%|*}"
+            rest="${proj_info#*|}"
+            firma="${rest%%|*}"
+            sub="${rest#*|}"
+            mkdir -p "dist/${proj}"
+            cat > "dist/${proj}/index.html" <<HTML
+          <!DOCTYPE html><html lang="de"><head><meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>${firma}</title>
+          <style>
+            *{box-sizing:border-box;margin:0;padding:0}
+            body{font-family:system-ui,sans-serif;background:#0a0a0f;color:#e2e2f0;
+                 display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center}
+            .c{max-width:480px;padding:2rem}
+            .tag{display:inline-block;background:#6366f133;border:1px solid #6366f1;
+                 color:#6366f1;padding:.3rem .8rem;border-radius:999px;font-size:.75rem;margin-bottom:1.5rem}
+            h1{font-size:1.75rem;font-weight:800;margin:.5rem 0}
+            p{color:#666;margin:1rem 0 2rem;font-size:.9rem;line-height:1.5}
+            a{display:inline-block;background:#6366f1;color:#fff;padding:.75rem 1.5rem;
+               border-radius:.5rem;text-decoration:none;font-weight:600}
+          </style></head>
+          <body><div class="c">
+            <div class="tag">Website</div>
+            <h1>${firma}</h1>
+            <p>${sub}<br><br>Diese Website nutzt serverseitiges Rendering<br>und wird separat gehostet.</p>
+            <a href="/">← Zur Übersicht</a>
+          </div></body></html>
+          HTML
+            echo "📄 Placeholder: ${proj}"
+          done
+
           echo ""
-          echo "Ergebnis: ${ok} assembliert, ${skip} übersprungen"
-          echo "Dateien in dist/: $(find dist -type f | wc -l)"
+          echo "Gesamt: $(find dist -name 'index.html' | wc -l) Seiten"
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
