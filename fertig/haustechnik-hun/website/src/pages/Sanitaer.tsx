@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { CalendarCheck, CheckCircle2, ArrowRight, Star, Wrench, ShowerHead, Flame, Settings, Droplets, Bath, Hammer, Thermometer } from "lucide-react";
 import sanitaerHero from "@/assets/galerie-1.jpg";
 import digitalTablet from "@/assets/galerie-2.jpg";
-import teamMeeting from "@/assets/team-laszlo.jpg";
+import teamMeeting from "@/assets/galerie-3.jpg";
+// Alle galerie-*.jpg: Referenzfotos aus Original-Galerie von haustechnik-hun.de
 
 const advantages = [
   "Schneller Service",

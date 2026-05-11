@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
-import consultant from "@/assets/consultant.jpg";
+import teamLaszlo from "@/assets/team-laszlo.jpg";
 import { toast } from "@/hooks/use-toast";
 
 const contactSchema = z.object({
@@ -103,9 +103,10 @@ const Kontakt = () => {
             {/* Contact card */}
             <div className="flex flex-col">
               <div className="rounded-2xl overflow-hidden bg-card shadow-card">
+                {/* Echtes Foto: Laszlo Hun – Inhaber Haustechnik Hun – Original haustechnik-hun.de */}
                 <img
-                  src={consultant}
-                  alt="Vanessa Thiele — Ansprechpartnerin"
+                  src={teamLaszlo}
+                  alt="Laszlo Hun – Installateur- und Heizungsbaumeister, Haustechnik Hun"
                   className="w-full h-[420px] object-cover"
                   loading="lazy"
                 />

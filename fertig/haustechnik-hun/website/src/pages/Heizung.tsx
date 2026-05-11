@@ -6,7 +6,10 @@ import { Button } from "@/components/ui/button";
 import { CalendarCheck, CheckCircle2, Star, Wrench, ShowerHead, Flame, Settings, Droplets, Hammer, Thermometer } from "lucide-react";
 import heizungHero from "@/assets/pelletsheizung.jpg";
 import digitalTablet from "@/assets/leistungen.jpg";
-import teamMeeting from "@/assets/betrieb.jpg";
+import teamMeeting from "@/assets/fahrzeug.jpg";
+// pelletsheizung: Holz-/Pelletsheizung LIVE – Original haustechnik-hun.de (Über uns + Leistungen)
+// leistungen: Leistungsbereich Heizung – Original haustechnik-hun.de
+// fahrzeug: "Für jede Baustelle extra vorbereitet" – Original haustechnik-hun.de (Leistungen)
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const advantages = [
