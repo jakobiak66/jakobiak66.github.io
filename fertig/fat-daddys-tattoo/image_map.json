@@ -1,0 +1,19 @@
+{
+  "logo": "images/original/logo.png",
+  "hero": "images/original/hero.jpg",
+  "team": ["images/original/artist-holgi.jpg"],
+  "leistungen": [],
+  "galerie": [
+    "images/original/tattoo-adler.jpg",
+    "images/original/tattoo-blume.jpg",
+    "images/original/tattoo-drache.jpg"
+  ],
+  "sonstige": [],
+  "urls_gefunden": [
+    "http://www.fat-daddys-tattoo.de/wp-content/uploads/2016/01/daddyyyy2.jpg",
+    "http://www.fat-daddys-tattoo.de/wp-content/flagallery/tattoos/adler.jpg",
+    "http://www.fat-daddys-tattoo.de/wp-content/flagallery/tattoos/blume.jpg",
+    "http://www.fat-daddys-tattoo.de/wp-content/flagallery/tattoos/drache.jpg",
+    "http://www.fat-daddys-tattoo.de/wp-content/flagallery/tattoos/butterfly.jpg"
+  ]
+}

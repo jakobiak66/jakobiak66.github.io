@@ -1,0 +1,51 @@
+{
+  "firma": "Dipl.-Ing. Alexander Christ GmbH",
+  "slogan": "Gebäudetechnik für komfortables und energiesparendes Leben",
+  "beschreibung": "Modernes Berliner Gebäudetechnikunternehmen mit Schwerpunkten Heizung, Sanitär, Solar und Schornsteinbau. Maßgeschneiderte Konzepte auf Basis intensiver Beratung. 24-Stunden-Notdienst.",
+  "branche": "SHK / Gebäudetechnik / Heizung / Sanitär / Solar / Schornstein",
+  "leistungen": [
+    "Heizungsinstallation und -modernisierung",
+    "Sanitärinstallation",
+    "Schornsteinbau",
+    "Energieberatung",
+    "Kamine",
+    "Solar- und Photovoltaikanlagen",
+    "Regenwassernutzung",
+    "24h-Notdienst"
+  ],
+  "team": [
+    {
+      "name": "Alexander Christ",
+      "rolle": "Geschäftsführer, Dipl.-Ing. (FH)",
+      "bild": ""
+    }
+  ],
+  "kontakt": {
+    "email": "info@christ-berlin.de",
+    "telefon": "030 - 453 01 626",
+    "fax": "030 - 453 07 156",
+    "notdienst": "030 - 453 10 136",
+    "adresse": "Tegeler Straße 42-43",
+    "stadt": "Berlin",
+    "plz": "13353"
+  },
+  "oeffnungszeiten": "24 Stunden Notdienst verfügbar",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": [],
+    "leistungen": [
+      "images/original/heizung.png",
+      "images/original/sanitaer.png",
+      "images/original/schornstein.png",
+      "images/original/solar.png"
+    ]
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {},
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": true,
+  "handelsregister": "HRB 143702 B",
+  "registergericht": "Berlin Charlottenburg"
+}

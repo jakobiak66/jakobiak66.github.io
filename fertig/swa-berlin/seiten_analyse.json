@@ -1,0 +1,52 @@
+{
+  "alte_website_seiten": [
+    "Home",
+    "Leistungen",
+    "Referenzen",
+    "Jobs",
+    "Kontakt",
+    "Impressum",
+    "Datenschutzerklärung"
+  ],
+  "template_seiten": [
+    "Home",
+    "Leistungen",
+    "Heizung",
+    "Sanitär",
+    "Gas",
+    "Wohnraumlüftung",
+    "Wasseraufbereitung",
+    "Solartechnik",
+    "Bad & Sanitärinstallation",
+    "Kontakt",
+    "Über uns",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "seiten_vorhanden": [
+    "Home",
+    "Leistungen",
+    "Kontakt",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "seiten_fehlend_im_template": [
+    "Referenzen",
+    "Jobs/Karriere",
+    "Kälte/Klima"
+  ],
+  "seiten_nur_im_template": [
+    "Heizung",
+    "Sanitär",
+    "Gas",
+    "Wohnraumlüftung",
+    "Wasseraufbereitung",
+    "Solartechnik",
+    "Bad & Sanitärinstallation",
+    "Über uns"
+  ],
+  "neue_seiten_erstellen": [
+    "Referenzen",
+    "Jobs/Karriere"
+  ]
+}

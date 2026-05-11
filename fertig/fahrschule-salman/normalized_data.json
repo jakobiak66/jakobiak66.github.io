@@ -1,0 +1,41 @@
+{
+  "firma": "Fahrschule Salman",
+  "slogan": "Auf direktem Weg zum Führerschein – professionell, zügig, fair",
+  "beschreibung": "Die Fahrschule Salman in Bremen-Huckelriede bietet professionelle Fahrausbildung in den Klassen B, BF17 und BE. Theorieunterricht zweimal wöchentlich, Ausbildung auf Fahrzeugen mit Schalt- und Automatikgetriebe. Zentral gelegen mit direkter Anbindung an Straßenbahn und Bus.",
+  "branche": "Fahrschule / Fahrausbildung / Führerschein",
+  "leistungen": [
+    "Führerschein Klasse B",
+    "Führerschein BF17 (begleitetes Fahren ab 17)",
+    "Führerschein BE (Anhänger)",
+    "Theorieunterricht (Mo + Mi abends)",
+    "Praktische Fahrausbildung",
+    "Schalt- und Automatikgetriebe",
+    "Individuelle Fahrplanung",
+    "Intensive Kurse"
+  ],
+  "team": [],
+  "kontakt": {
+    "email": "",
+    "telefon": "0421-84 999 053",
+    "mobil": "0177-33 78 307",
+    "adresse": "Buntentorsteinweg 541",
+    "stadt": "Bremen",
+    "plz": "28201",
+    "stadtteil": "Bremen-Huckelriede"
+  },
+  "oeffnungszeiten": "Montag 15:30–19:00 Uhr\nMittwoch 16:00–19:00 Uhr\nTheorie: Mo 19:00–20:30 Uhr, Mi 19:00–20:30 Uhr",
+  "anfahrt": "Straßenbahnlinie 4 (Haltestelle Huckelriede), Buslinien 26, 27, 51, 53",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": [],
+    "leistungen": []
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {
+    "google_bewertungen": "vorhanden"
+  },
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": false
+}

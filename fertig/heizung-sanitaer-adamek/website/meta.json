@@ -1,0 +1,16 @@
+{
+  "name": "handwerker-klon",
+  "beschreibung": "Professionelles SHK-Handwerksunternehmen mit Heizung, Sanitär, Wärmepumpe und Karriereseite. Grüne Primärfarbe, modernes Design mit Hero, Services, FAQ, Buchungsformular.",
+  "stil": "modern, professionell, grün, vertrauenswürdig",
+  "geeignet_fuer": ["shk", "heizung", "sanitaer", "klima", "haustechnik", "installation", "handwerk"],
+  "seiten": ["Home", "Über uns", "Sanitär", "Heizung", "Wärmepumpe", "Beratung", "Kontakt", "Karriere"],
+  "hauptdatei": "src/App.tsx",
+  "css_variablen_datei": "src/index.css",
+  "komponenten_ordner": "src/components/site",
+  "platzhalter": ["Firmenname", "Slogan", "Beschreibung", "Telefon", "Email", "Adresse", "Leistungen", "Team"],
+  "bild_platzhalter": ["hero-plumber.jpg", "heizung-hero.jpg", "sanitaer-hero.jpg", "waermepumpe-hero.jpg", "team-group.jpg", "founders.jpg"],
+  "farb_variablen": ["--primary", "--primary-foreground", "--primary-glow", "--primary-dark", "--secondary", "--background", "--foreground"],
+  "erweiterbar": true,
+  "technologie": "React + TypeScript + Tailwind + Vite + react-router-dom",
+  "besonderheiten": ["FAQ-Sektion", "Karriereseite", "Buchungsformular", "Projektschritte", "Stats-Sektion", "Dark-Mode-Unterstützung"]
+}

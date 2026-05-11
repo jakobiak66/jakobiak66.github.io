@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+    
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* ZEAL Cyan - Bright cyan from logo for buttons */
+    --primary: 187 100% 42%;
+    --primary-foreground: 0 0% 5%;
+    
+    /* ZEAL Blue - Deep blue for secondary */
+    --secondary: 200 82% 31%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
+    
+    /* Silver accent */
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 187 100% 42%;
+    
+    --radius: 0.5rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(187 100% 42%), hsl(200 82% 31%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 5%), hsl(0 0% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(200 82% 15%) 50%, hsl(187 100% 30%) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(187 100% 42% / 0.3);
+    --shadow-glow: 0 0 40px hsl(187 100% 42% / 0.2);
+    --shadow-blue: 0 4px 20px hsl(187 100% 42% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
+    
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 200 82% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 187 100% 42%;
+    --secondary-foreground: 0 0% 8%;
+    
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 70%;
+    
+    --accent: 200 82% 31%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 200 82% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+  
+  /* Skip link styling */
+  .sr-only:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: nowrap;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-blue {
+    box-shadow: var(--shadow-blue);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px hsl(187 100% 42% / 0.2);
+  }
+  to {
+    box-shadow: 0 0 30px hsl(187 100% 42% / 0.6);
+  }
+}

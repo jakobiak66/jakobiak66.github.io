@@ -1,0 +1,55 @@
+{
+  "alte_website_seiten": [
+    "Home / Aktuelles",
+    "Arbeiten - Malerei Galerie 2024/25",
+    "Arbeiten - Malerei Galerie 2022/23",
+    "Arbeiten - Malerei Galerie 2019-20",
+    "Arbeiten - Malerei Galerie 2017/16",
+    "Arbeiten - Malerei Galerie Archiv",
+    "Arbeiten - Malerei/Papier Galerie 2019/21",
+    "Arbeiten - Siebdruck Lichtpunkte",
+    "Arbeiten - Ausstellungsansichten",
+    "Workshops",
+    "Vita - Biografie",
+    "Vita - Ausstellungen",
+    "Vita - Preise",
+    "Vita - Texte",
+    "Kontakt"
+  ],
+  "template_seiten": [
+    "Home",
+    "Leistungen",
+    "Über uns",
+    "Galerie",
+    "Kontakt",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "seiten_vorhanden": [
+    "Galerie",
+    "Kontakt"
+  ],
+  "seiten_fehlend_im_template": [
+    "Aktuelles / News",
+    "Malerei Galerien (mehrere Jahrgänge)",
+    "Siebdruck",
+    "Ausstellungsansichten",
+    "Workshops",
+    "Vita / Biografie",
+    "Ausstellungsliste",
+    "Preise und Auszeichnungen",
+    "Texte / Kunstkritiken"
+  ],
+  "seiten_nur_im_template": [
+    "Leistungen"
+  ],
+  "neue_seiten_erstellen": [
+    "Aktuelles",
+    "Arbeiten (Übersicht mit Unterkategorien: Malerei, Siebdruck, Ausstellungsansichten)",
+    "Vita (mit Biografie, Ausstellungsliste, Preise)",
+    "Workshops"
+  ],
+  "branche": "Bildende Kunst / Künstlerin",
+  "template_empfehlung": "sight-to-code-dream",
+  "begruendung": "Susanne Heitmann ist Künstlerin (Malerei, Siebdruck) aus Osnabrück/Berlin. Das Site-to-Code-Dream Template ist minimalistisch und eignet sich für alle Branchen. Die Galerie-Struktur und portfolio-orientierte Präsentation passt zum minimalen, kunstaffinen Stil."
+}

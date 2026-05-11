@@ -1,0 +1,46 @@
+{
+  "logo": {
+    "gefunden": false,
+    "pfad": "images/original/logo.png",
+    "quell_url": null,
+    "notiz": "Logo nicht direkt als Logo-Datei gefunden. Versuche: /logo.png, /logo.svg, /logo.jpg, /images/logo.png fehlgeschlagen. Favicon-Fallback möglich unter https://www.haustechnik-hun.de/favicon.ico"
+  },
+  "hero": "images/original/hero.jpg",
+  "hero_quell_url": "https://www.haustechnik-hun.de/s/cc_images/cache_2420956111.jpg",
+  "team": [
+    {
+      "name": "Laszlo Hun",
+      "pfad": "images/original/team-laszlo.jpg",
+      "quell_url": "https://www.haustechnik-hun.de/s/cc_images/cache_2420956112.jpg?t=1581504984"
+    }
+  ],
+  "leistungen": [
+    {
+      "beschreibung": "Haustechnik Hun Betrieb",
+      "pfad": "images/original/betrieb.jpg",
+      "quell_url": "https://www.haustechnik-hun.de/s/cc_images/cache_2420956111.jpg?t=1237223855"
+    },
+    {
+      "beschreibung": "Holz-/Pelletsheizung",
+      "pfad": "images/original/pelletsheizung.jpg",
+      "quell_url": "https://www.haustechnik-hun.de/s/cc_images/cache_2420956116.jpg?t=1237224124"
+    },
+    {
+      "beschreibung": "Leistungsübersicht",
+      "pfad": "images/original/leistungen.jpg",
+      "quell_url": "https://www.haustechnik-hun.de/s/cc_images/cache_2420956114.jpg?t=1237224202"
+    },
+    {
+      "beschreibung": "Fahrzeug/Baustelle",
+      "pfad": "images/original/fahrzeug.jpg",
+      "quell_url": "https://www.haustechnik-hun.de/s/cc_images/cache_2455595622.JPG?t=1431593139"
+    }
+  ],
+  "galerie": [
+    "https://www.haustechnik-hun.de/s/cc_images/thumb_2450776497.jpg?t=1421419850",
+    "https://www.haustechnik-hun.de/s/cc_images/thumb_2450776498.jpg?t=1421419850",
+    "https://www.haustechnik-hun.de/s/cc_images/thumb_2450776499.jpg?t=1421419850",
+    "https://www.haustechnik-hun.de/s/cc_images/thumb_2450776500.jpg?t=1421419850"
+  ],
+  "sonstige": []
+}

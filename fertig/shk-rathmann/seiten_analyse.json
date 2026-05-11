@@ -1,0 +1,59 @@
+{
+  "alte_website_seiten": [
+    "Willkommen / Home",
+    "Team",
+    "Leistungen (Übersicht)",
+    "Leistungen - Sanitär",
+    "Leistungen - Sanitär Referenzen",
+    "Leistungen - Heizung",
+    "Leistungen - Alternative Energien",
+    "Leistungen - Heizung Referenzen",
+    "Service",
+    "Service - Rattensperre",
+    "Unsere Kunden",
+    "Kontakt",
+    "Kontakt - Impressum",
+    "Kontakt - Anfahrt",
+    "Sitemap"
+  ],
+  "template_seiten": [
+    "Home",
+    "Leistungen",
+    "Über uns / Team",
+    "Referenzen",
+    "Kontakt",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "seiten_vorhanden": [
+    "Home",
+    "Leistungen",
+    "Team",
+    "Referenzen",
+    "Kontakt",
+    "Impressum"
+  ],
+  "seiten_fehlend_im_template": [
+    "Alternative Energien",
+    "Service / Notfalldienst",
+    "Unsere Kunden",
+    "Anfahrt"
+  ],
+  "seiten_nur_im_template": [],
+  "neue_seiten_erstellen": [
+    "Service / Notfalldienst",
+    "Unsere Kunden / Kundenstimmen"
+  ],
+  "branche": "SHK (Sanitär, Heizung, Klempner)",
+  "template_empfehlung": "handwerker-klon",
+  "template_scores": {
+    "handwerker-klon": 90,
+    "hlr-websiteentwurf": 85,
+    "remix-of-pixel-perfect-clone": 75,
+    "sight-to-code-dream": 35,
+    "pixel-perfect-clone-52135": 20,
+    "pixel-perfect-clone-95586": 15,
+    "zeal-security-blueprint": 10
+  },
+  "begruendung": "SHK-Rathmann ist ein Sanitär- und Heizungsbetrieb in Berlin. Der handwerker-klon ist speziell für SHK/Heizung/Sanitär konzipiert, hat passende Seitenstruktur (8 Seiten) und einen professionellen, handwerklichen Stil."
+}

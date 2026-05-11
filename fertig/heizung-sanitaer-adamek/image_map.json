@@ -1,0 +1,79 @@
+{
+  "logo": {
+    "gefunden": false,
+    "pfad": "images/original/logo.png",
+    "quell_url": null,
+    "notiz": "Kein explizites Logo-Bild gefunden. Website nutzt Textlogo. Fallback: Favicon unter https://heizung-sanitaer-adamek.de/favicon.ico"
+  },
+  "hero": "images/original/hero.jpg",
+  "hero_quell_url": "https://heizung-sanitaer-adamek.de/images/pixabay-bb4b32cb9a2947405e.jpg",
+  "team": [
+    {
+      "name": "Ralf Adamek",
+      "pfad": "images/original/monteur.jpg",
+      "quell_url": "https://heizung-sanitaer-adamek.de/images/monteur.jpg"
+    }
+  ],
+  "leistungen": [
+    {
+      "beschreibung": "Heizungsanlagen",
+      "pfad": "images/original/heizung.png",
+      "quell_url": "https://heizung-sanitaer-adamek.de/images/heizung.png"
+    },
+    {
+      "beschreibung": "Armatur/Sanitär",
+      "pfad": "images/original/armatur.png",
+      "quell_url": "https://heizung-sanitaer-adamek.de/images/Armatur.png"
+    },
+    {
+      "beschreibung": "Bad",
+      "pfad": "images/original/bad.png",
+      "quell_url": "https://heizung-sanitaer-adamek.de/images/bad.png"
+    }
+  ],
+  "galerie": [
+    {
+      "pfad": "images/original/bad-1.jpg",
+      "quell_url": "https://heizung-sanitaer-adamek.de/pluginAppObj/pluginAppObj_20_01/petschel-heizung-bad1.jpg"
+    },
+    {
+      "pfad": "images/original/bad-2.jpg",
+      "quell_url": "https://heizung-sanitaer-adamek.de/pluginAppObj/pluginAppObj_20_01/petschel-heizung-bad2.jpg"
+    },
+    {
+      "pfad": "images/original/bad-3.jpg",
+      "quell_url": "https://heizung-sanitaer-adamek.de/pluginAppObj/pluginAppObj_20_01/petschel-heizung-bad3.jpg"
+    },
+    {
+      "pfad": "images/original/bad-4.jpg",
+      "quell_url": "https://heizung-sanitaer-adamek.de/pluginAppObj/pluginAppObj_20_01/petschel-heizung-bad4.jpg"
+    },
+    {
+      "pfad": "images/original/bad-5.jpg",
+      "quell_url": "https://heizung-sanitaer-adamek.de/pluginAppObj/pluginAppObj_20_01/petschel-heizung-bad5.jpg"
+    }
+  ],
+  "partner_logos": [
+    {
+      "name": "Buderus",
+      "pfad": "images/original/logo-buderus.png",
+      "quell_url": "https://heizung-sanitaer-adamek.de/images/logo_buderus.png"
+    },
+    {
+      "name": "Junkers",
+      "pfad": "images/original/logo-junkers.png",
+      "quell_url": "https://heizung-sanitaer-adamek.de/images/logo_junkers_de.png"
+    },
+    {
+      "name": "Vaillant",
+      "pfad": "images/original/logo-vaillant.png",
+      "quell_url": "https://heizung-sanitaer-adamek.de/images/logo_vaillant.png"
+    },
+    {
+      "name": "Viessmann",
+      "pfad": "images/original/logo-viessmann.gif",
+      "quell_url": "https://heizung-sanitaer-adamek.de/images/logo_viessmann.gif"
+    }
+  ],
+  "sonstige": []
+}

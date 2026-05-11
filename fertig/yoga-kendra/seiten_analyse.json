@@ -1,0 +1,54 @@
+{
+  "alte_website_seiten": [
+    "Home",
+    "Für Yoga-Interessierte",
+    "Für Unternehmen",
+    "Angebote für Unternehmen",
+    "Über mich",
+    "Warum Yoga?",
+    "Vita",
+    "Einzelangebote",
+    "Gruppenangebote",
+    "Aktuelle Angebote",
+    "Referenzen",
+    "Kontakt",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "template_seiten": [
+    "Hero",
+    "Benefits",
+    "Services",
+    "About",
+    "Process",
+    "Guarantees",
+    "Testimonials",
+    "FAQ",
+    "CallCta",
+    "ContactForm",
+    "Footer"
+  ],
+  "seiten_vorhanden": [
+    "Hero (Home)",
+    "Services (Einzelangebote + Gruppenangebote)",
+    "About (Über mich)",
+    "Testimonials (Referenzen)",
+    "ContactForm (Kontakt)"
+  ],
+  "seiten_fehlend_im_template": [
+    "Für Unternehmen (eigene Sektion nötig)",
+    "Warum Yoga? (eigene Sektion nötig)",
+    "Aktuelle Angebote / Kurse"
+  ],
+  "seiten_nur_im_template": [
+    "Process",
+    "Guarantees",
+    "Benefits",
+    "CallCta"
+  ],
+  "neue_seiten_erstellen": [
+    "FuerUnternehmen",
+    "WarumYoga",
+    "AktuelleAngebote"
+  ]
+}

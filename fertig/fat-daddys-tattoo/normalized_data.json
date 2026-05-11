@@ -1,0 +1,48 @@
+{
+  "firma": "Fat Daddys Backyard",
+  "slogan": "Mit Nadel und Tinte – dein Tattoo, unsere Leidenschaft",
+  "beschreibung": "Fat Daddys Backyard ist ein professionelles Tattoo-Studio in Bremen-Gröpelingen. Das Team um Dom und Daddy (Holger Krell) begleitet euch von der ersten Idee bis zum fertigen Tattoo – mit Erfahrung, Kreativität und handwerklicher Präzision. Seit 2024 im neuen Standort im Hinterhof der Scharmbecker Str. 6.",
+  "branche": "Tattoo Studio / Körperkunst / Tätowierung",
+  "leistungen": [
+    "Tattoos (alle Stile)",
+    "Motiv-Beratung und Entwurf",
+    "Cover-Up Tattoos",
+    "Individuelle Designs",
+    "Terminbuchung (telefonisch oder per E-Mail)",
+    "Spontane Kurzbesuche nach Anmeldung"
+  ],
+  "team": [
+    {
+      "name": "Holger Krell (Daddy)",
+      "rolle": "Tätowierer & Inhaber",
+      "bild": "images/original/artist-holgi.jpg"
+    },
+    {
+      "name": "Dom",
+      "rolle": "Tätowierer",
+      "bild": "images/original/artist-dom.jpg"
+    }
+  ],
+  "kontakt": {
+    "email": "fat-daddys-tattoo@gmx.de",
+    "telefon": "0421-57705146",
+    "adresse": "Scharmbecker Str. 6",
+    "stadt": "Bremen",
+    "plz": "28309",
+    "stadtteil": "Bremen-Gröpelingen",
+    "hinweis": "Im Hinterhof – Backyard"
+  },
+  "oeffnungszeiten": "Nach Vereinbarung – telefonisch oder per E-Mail",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": ["images/original/artist-holgi.jpg"],
+    "leistungen": ["images/original/tattoo-1.jpg", "images/original/tattoo-2.jpg"],
+    "galerie": []
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {},
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": false
+}

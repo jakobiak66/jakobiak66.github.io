@@ -1,0 +1,16 @@
+{
+  "name": "remix-of-pixel-perfect-clone",
+  "beschreibung": "Kompaktes SHK-Template mit Heizung, Sanitär, Gas und Service. Simples React Router Setup, ideal für kleinere Handwerksbetriebe mit übersichtlichem Portfolio.",
+  "stil": "modern, clean, kompakt, hell",
+  "geeignet_fuer": ["shk", "heizung", "sanitaer", "gas", "haustechnik", "handwerk", "installation", "kleinbetrieb"],
+  "seiten": ["Home", "Leistungen", "Heizung", "Sanitär", "Gas", "Service", "Kontakt"],
+  "hauptdatei": "src/App.tsx",
+  "css_variablen_datei": "src/index.css",
+  "komponenten_ordner": "src/components",
+  "platzhalter": ["Firmenname", "Slogan", "Leistungen", "Kontakt"],
+  "bild_platzhalter": [],
+  "farb_variablen": ["--primary", "--secondary", "--background", "--foreground"],
+  "erweiterbar": true,
+  "technologie": "React + TypeScript + Tailwind + Vite + react-router-dom",
+  "besonderheiten": ["Kompaktes Layout", "Gas-Sektion", "Service-Seite", "Ideal für kleinere Betriebe"]
+}

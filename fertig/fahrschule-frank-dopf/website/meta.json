@@ -1,0 +1,16 @@
+{
+  "name": "sight-to-code-dream",
+  "beschreibung": "Minimalistisches Single-Page Template. Nur eine Index-Seite, maximale Flexibilität für alle Branchen. Ideal als Basis für individuelle Erweiterungen (Fahrschulen, Yoga, Tattoo, Goldschmiede etc.).",
+  "stil": "minimalistisch, flexibel, modern, hell",
+  "geeignet_fuer": ["fahrschule", "yoga", "fitness", "tattoo", "goldschmiede", "kosmetik", "massage", "coaching", "freelancer", "alle_branchen"],
+  "seiten": ["Home"],
+  "hauptdatei": "src/App.tsx",
+  "css_variablen_datei": "src/index.css",
+  "komponenten_ordner": "src/components",
+  "platzhalter": ["Firmenname", "Slogan", "Beschreibung", "Leistungen", "Kontakt"],
+  "bild_platzhalter": ["hero.jpg"],
+  "farb_variablen": ["--primary", "--secondary", "--background", "--foreground", "--accent"],
+  "erweiterbar": true,
+  "technologie": "React + TypeScript + Tailwind + Vite + react-router-dom",
+  "besonderheiten": ["Single-Page", "Maximale Flexibilität", "Einfache Erweiterung", "Alle Branchen geeignet"]
+}

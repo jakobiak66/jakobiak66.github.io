@@ -1,0 +1,70 @@
+{
+  "firma": "SWA Service Wartung Anlagenbau Berlin GmbH",
+  "slogan": "Kompetenter Partner rund um die Haustechnik",
+  "beschreibung": "Seit April 2020 bietet die SWA Berlin GmbH professionelle TGA-Dienstleistungen in den Bereichen Heizung, Sanitär, Lüftung und Kälte/Klima. Traditionelles Handwerk kombiniert mit modernsten Technologien. Einsatzgebiet: Berlin und Brandenburg.",
+  "branche": "TGA / Haustechnik / Heizung / Sanitär / Lüftung / Kälte-Klima",
+  "leistungen": [
+    "Heizungsinstallation (Wärmeerzeuger, Wärmepumpen, Gaskessel)",
+    "Sanitärinstallation (Kalt/Warmwasser, Abwasser, Sanitärobjekte)",
+    "Lüftungsanlagen (zentral und dezentral)",
+    "Kälte- und Klimaanlagen (Split, Multi-Split, VRF)",
+    "Neubau und Modernisierung",
+    "Service und Wartung",
+    "Großprojekte (Industrie, Gewerbe)",
+    "Druckhaltestationen und Entgasungsanlagen"
+  ],
+  "team": [
+    {
+      "name": "Ulf Weihmann",
+      "rolle": "Geschäftsführer",
+      "bild": ""
+    },
+    {
+      "name": "Michael Uwe Trapp",
+      "rolle": "Geschäftsführer",
+      "bild": ""
+    }
+  ],
+  "kontakt": {
+    "email": "info@swa.berlin",
+    "telefon": "+49 (0)30 23 593 85 - 80",
+    "adresse": "Volmerstraße 10",
+    "stadt": "Berlin",
+    "plz": "12489"
+  },
+  "oeffnungszeiten": "",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": [],
+    "leistungen": [
+      "images/original/heizung.jpg",
+      "images/original/sanitaer.jpg",
+      "images/original/lueftung.jpg",
+      "images/original/kaelte.jpg"
+    ]
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {},
+  "referenzprojekte": [
+    {
+      "auftraggeber": "E1 Energiemanagement GmbH",
+      "ort": "Pankstraße 8, 13127 Berlin",
+      "gewerk": "Heizung",
+      "zeitraum": "Juni 2024 bis April 2025"
+    },
+    {
+      "auftraggeber": "Tropical Islands Management GmbH",
+      "ort": "Tropical-Islands-Allee 1, 15910 Krausnick",
+      "gewerk": "Kälte, Heizung",
+      "zeitraum": "September 2023 bis Juni 2024"
+    }
+  ],
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": true,
+  "handelsregister": "HRB 215691",
+  "registergericht": "Berlin Charlottenburg",
+  "steuernummer": "37 / 553 / 00011",
+  "ust_id": "DE32 8976 933"
+}

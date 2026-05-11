@@ -1,0 +1,13 @@
+{
+  "primaer": "#c0392b",
+  "sekundaer": "#e74c3c",
+  "akzent": "#f39c12",
+  "hintergrund": "#ffffff",
+  "text": "#2c2c2c",
+  "text_hell": "#666666",
+  "button": "#c0392b",
+  "button_hover": "#922b21",
+  "quelle": "generiert",
+  "notiz": "Keine CSS-Farben im Crawl gefunden. Rot/Wärme-Töne passend zu Heizungs-/Sanitärbetrieb generiert. Buderus/Junkers/Viessmann Partnerfarben berücksichtigt.",
+  "alle_gefundenen": []
+}

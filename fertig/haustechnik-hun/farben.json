@@ -1,0 +1,13 @@
+{
+  "primaer": "#2e7d32",
+  "sekundaer": "#388e3c",
+  "akzent": "#ff8f00",
+  "hintergrund": "#ffffff",
+  "text": "#1a1a1a",
+  "text_hell": "#666666",
+  "button": "#2e7d32",
+  "button_hover": "#1b5e20",
+  "quelle": "generiert",
+  "notiz": "Keine CSS-Farben im Crawl gefunden. Grün passend zu SHK/Haustechnik-Branche generiert.",
+  "alle_gefundenen": []
+}

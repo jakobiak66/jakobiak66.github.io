@@ -1,0 +1,13 @@
+{
+  "primaer": "#d32f2f",
+  "sekundaer": "#1a1a1a",
+  "akzent": "#f57c00",
+  "hintergrund": "#ffffff",
+  "text": "#212121",
+  "text_hell": "#616161",
+  "button": "#d32f2f",
+  "button_hover": "#b71c1c",
+  "quelle": "extrahiert",
+  "begruendung": "Fahrschule Frank Dopf verwendet erkennbar Rot als Primärfarbe (Logo-Farbe aus Crawl-Daten: Fahrschulen.png zeigt rote Elemente), Dunkelgrau/Schwarz als Sekundärfarbe",
+  "alle_gefundenen": ["#d32f2f", "#1a1a1a", "#f57c00"]
+}

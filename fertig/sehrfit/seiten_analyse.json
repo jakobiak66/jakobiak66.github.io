@@ -1,0 +1,8 @@
+{
+  "alte_website_seiten": ["Home/Startseite", "Ihr Trainer", "Leistungen", "Trainings-Inhalte", "Fitness-Raum", "Kontakt", "Impressum", "Datenschutz"],
+  "template_seiten": ["Home", "Leistungen", "Über uns", "Prozess", "Garantien", "Testimonials", "FAQ", "Kontakt", "Footer"],
+  "seiten_vorhanden": ["Home", "Leistungen", "Über uns (Trainer)", "Kontakt", "Impressum"],
+  "seiten_fehlend_im_template": ["Fitness-Raum", "Trainings-Inhalte"],
+  "seiten_nur_im_template": ["Prozess", "Garantien", "Testimonials", "FAQ"],
+  "neue_seiten_erstellen": ["Fitness-Raum-Sektion in Index einbauen", "Trainings-Inhalte als eigene Seite"]
+}

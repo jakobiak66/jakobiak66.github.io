@@ -1,0 +1,22 @@
+{
+  "logo": "images/original/logo.png",
+  "hero": "images/original/hero.jpg",
+  "team": [],
+  "leistungen": [],
+  "galerie": [
+    "images/original/galerie-ausstellung-1.jpg",
+    "images/original/galerie-ausstellung-2.jpg",
+    "images/original/galerie-ausstellung-3.jpg",
+    "images/original/galerie-malerei-1.jpg",
+    "images/original/galerie-malerei-2.jpg",
+    "images/original/galerie-malerei-3.jpg"
+  ],
+  "sonstige": [],
+  "quellen": {
+    "galerie_ausstellung_1": "https://susanneheitmann.de/galerie/Ausstellungsansichten/klein/capricci-2023-Foto-A.Lechtape.jpg",
+    "galerie_ausstellung_2": "https://susanneheitmann.de/galerie/Ausstellungsansichten/klein/IN-SITU-2024.jpg",
+    "galerie_ausstellung_3": "https://susanneheitmann.de/galerie/Ausstellungsansichten/klein/Kunsthalle-OS-1.jpg",
+    "galerie_malerei_1": "https://susanneheitmann.de/galerie/Galerie2017-16/klein/01-Portraet-I.jpg",
+    "galerie_malerei_2": "https://susanneheitmann.de/galerie/Galerie2017-16/klein/02-Portraet-III.jpg"
+  }
+}

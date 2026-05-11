@@ -1,0 +1,13 @@
+{
+  "primaer": "#334c98",
+  "sekundaer": "#3e3e3e",
+  "akzent": "#f44336",
+  "hintergrund": "#ffffff",
+  "text": "#333333",
+  "text_hell": "#666666",
+  "button": "#334c98",
+  "button_hover": "#1a2d6e",
+  "quelle": "extrahiert",
+  "notiz": "Farben aus HTML-Analyse extrahiert: #334c98 (Blau-Primär), #f44336 (Rot-Akzent), #3e3e3e (Dunkelgrau).",
+  "alle_gefundenen": ["#f44336", "#edeaea", "#3e3e3e", "#334c98", "#ffffff", "#333333"]
+}

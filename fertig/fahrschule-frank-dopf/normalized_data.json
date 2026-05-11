@@ -1,0 +1,48 @@
+{
+  "firma": "Fahrschule Frank Dopf",
+  "slogan": "Führerschein in Karlsruhe – professionell ausgebildet an 9 Standorten",
+  "beschreibung": "Die Fahrschule Frank Dopf ist eine der größten Fahrschulen in der Region Karlsruhe mit 9 Standorten. Ausbildung in PKW, Zweirad (Motorrad), LKW/Trailer und Simulator. Aufbauseminare für Fahranfänger (ASF). Auch für Senioren-Fahrtraining und Wiederholungsfahrten.",
+  "branche": "Fahrschule / Fahrausbildung / Führerschein",
+  "leistungen": [
+    "PKW-Ausbildung (Klasse B)",
+    "Zweirad-Ausbildung (Motorrad A, A1, A2, AM)",
+    "LKW-Ausbildung (Klasse C, CE)",
+    "Simulator-Ausbildung",
+    "Aufbauseminar für Fahranfänger (ASF)",
+    "Senioren-Fahrtraining",
+    "Intensivkurse",
+    "Theorieunterricht",
+    "Fahrstunden nach Bedarf"
+  ],
+  "standorte": [
+    "KA-Südstadt",
+    "KA-Südweststadt",
+    "KA-Oberreut",
+    "KA-Mühlburg",
+    "KA-Oststadt",
+    "KA-Durlach",
+    "KA-Neureut",
+    "Weingarten (Baden)",
+    "Stutensee-Blankenloch"
+  ],
+  "team": [],
+  "kontakt": {
+    "email": "",
+    "telefon": "",
+    "adresse": "Karlsruhe",
+    "stadt": "Karlsruhe",
+    "plz": "76"
+  },
+  "oeffnungszeiten": "Stundenpläne variieren je nach Standort – siehe Website",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": [],
+    "leistungen": []
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {},
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": true
+}

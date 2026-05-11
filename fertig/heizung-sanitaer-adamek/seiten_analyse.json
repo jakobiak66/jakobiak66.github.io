@@ -1,0 +1,52 @@
+{
+  "alte_website_seiten": [
+    "Home",
+    "Leistungen",
+    "Zertifikate",
+    "Energiesparen",
+    "Trinkwasser",
+    "Video",
+    "Beispiele",
+    "Kontakt",
+    "Standort",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "template_seiten": [
+    "Home",
+    "Über uns",
+    "Sanitär",
+    "Heizung",
+    "Wärmepumpe",
+    "Beratung",
+    "Kontakt",
+    "Karriere"
+  ],
+  "seiten_vorhanden": [
+    "Home",
+    "Leistungen",
+    "Kontakt",
+    "Impressum"
+  ],
+  "seiten_fehlend_im_template": [
+    "Zertifikate",
+    "Energiesparen",
+    "Trinkwasser",
+    "Beispiele/Referenzen",
+    "Standort",
+    "Video"
+  ],
+  "seiten_nur_im_template": [
+    "Über uns",
+    "Sanitär",
+    "Heizung",
+    "Wärmepumpe",
+    "Beratung",
+    "Karriere"
+  ],
+  "neue_seiten_erstellen": [
+    "Zertifikate",
+    "Energiesparen",
+    "Referenzen/Beispiele"
+  ]
+}

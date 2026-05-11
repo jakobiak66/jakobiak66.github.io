@@ -1,0 +1,46 @@
+{
+  "firma": "SEHRFIT",
+  "slogan": "Personal Fitness Training – individuell, effektiv, nachhaltig",
+  "beschreibung": "SEHRFIT ist ein professioneller Personal-Fitness-Trainer in Eggenstein-Leopoldshafen. Reinhard Pfeiffer, Sportwissenschaftler, bietet individuelles Einzeltraining und Gruppentraining an. Mit langjähriger Erfahrung und wissenschaftlich fundierten Methoden werden Fitness- und Gesundheitsziele erreicht.",
+  "branche": "Fitness / Personal Training / Sport / Gesundheit",
+  "leistungen": [
+    "Personal Training (Einzeltraining)",
+    "Gruppentraining",
+    "Fitness-Beratung und Trainingsplanung",
+    "Körpergewicht & Krafttraining",
+    "Ausdauertraining",
+    "Gewichtsreduktion & Body-Shaping",
+    "Fitness-Raum Nutzung",
+    "Sportwissenschaftliche Beratung"
+  ],
+  "team": [
+    {
+      "name": "Reinhard Pfeiffer",
+      "rolle": "Sportwissenschaftler & Personal Fitness Trainer",
+      "telefon": "0179-5478091",
+      "email": "info@sehrfit.de",
+      "bild": "images/original/trainer.jpg"
+    }
+  ],
+  "kontakt": {
+    "email": "info@sehrfit.de",
+    "telefon": "0179-5478091",
+    "adresse": "Eisenbahnstraße 48",
+    "stadt": "Eggenstein-Leopoldshafen",
+    "plz": "76344"
+  },
+  "oeffnungszeiten": "Nach Vereinbarung – flexibel anpassbar",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": ["images/original/trainer.jpg"],
+    "leistungen": ["images/original/training-1.jpg", "images/original/training-2.jpg"]
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {
+    "website": "https://www.sehrfit.de"
+  },
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": true
+}

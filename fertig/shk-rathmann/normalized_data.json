@@ -1,0 +1,46 @@
+{
+  "firma": "Olaf Rathmann – SHK Meisterbetrieb",
+  "slogan": "Schnell – Kompetent – Preiswert",
+  "beschreibung": "Ihr SHK-Meisterbetrieb in Berlin. Mit größter Sorgfalt führen wir sämtliche Arbeiten im Bereich Sanitär und Heizung durch. Von der Neuinstallation bis zur Altbausanierung – wir stehen Ihnen als kompetenter Fachmann zur Seite.",
+  "branche": "Sanitär, Heizung, Klempner (SHK)",
+  "leistungen": [
+    "Sanitär – Installation & Reparatur",
+    "Heizung – Planung & Einbau",
+    "Alternative Energien / Solar",
+    "Neuinstallation",
+    "Altbausanierung",
+    "Notfalldienst (24h am Wochenende)",
+    "Umfassende Beratung"
+  ],
+  "team": [
+    {
+      "name": "Olaf Rathmann",
+      "rolle": "Inhaber & Meister",
+      "beschreibung": "Schnell, kompetent und preiswert – Ihr SHK-Meister in Berlin."
+    }
+  ],
+  "kontakt": {
+    "email": "info@olaf-rathmann.de",
+    "telefon": "030 49791187",
+    "notruf": "0177 491 63 08",
+    "adresse": "Gottschedstr. 21",
+    "stadt": "Berlin",
+    "plz": "13357"
+  },
+  "oeffnungszeiten": "Montag–Freitag 8–16 Uhr, Notfall: Werktags ab 16 Uhr, Wochenende 24 Stunden",
+  "bilder": {
+    "logo": "images/original/logo.jpg",
+    "hero": "images/original/hero.jpg",
+    "team": [],
+    "leistungen": [
+      "images/original/heizung.png",
+      "images/original/sanitaer.png",
+      "images/original/solar.png"
+    ]
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {},
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": false
+}

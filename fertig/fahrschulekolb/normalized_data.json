@@ -1,0 +1,64 @@
+{
+  "firma": "Fahrschule Kolb",
+  "slogan": "Ihr Weg zum Ziel – Individuelle Ausbildung in Bremen",
+  "beschreibung": "Die Fahrschule Kolb wurde 1982 von Dieter Kolb gegründet und seit 01.05.1998 von Peter Uhlig weitergeführt. Wir bieten individuelle Ausbildung in den Fahrerlaubnisklassen A, A2, A1, AM, B, BE und L. Mitglied im Fahrlehrerverband Bremen.",
+  "branche": "Fahrschule",
+  "leistungen": [
+    "Klasse B – PKW (Schaltung, B197 und §78)",
+    "Klasse BE – PKW mit Anhänger",
+    "Klasse A – Motorrad",
+    "Klasse A2 – Motorrad bis 35 kW",
+    "Klasse A1 – Leichtkraftrad bis 125 cm³",
+    "Klasse AM – Kleinkraftrad / Mofa",
+    "Klasse L – Land- und forstwirtschaftliche Zugmaschinen",
+    "Theorieunterricht",
+    "Praktische Ausbildung"
+  ],
+  "team": [
+    {
+      "name": "Peter Uhlig",
+      "rolle": "Inhaber & Fahrlehrer",
+      "beschreibung": "Fahrlehrer seit 1985, Inhaber seit 01.05.1998. Zuständig für PKW- und Motorradausbildung sowie theoretischen Unterricht."
+    },
+    {
+      "name": "Matthias",
+      "rolle": "Fahrlehrer",
+      "beschreibung": "Seit 2014 als angestellter Fahrlehrer tätig. Spezialisiert auf PKW- und Motorradausbildung."
+    },
+    {
+      "name": "Frank",
+      "rolle": "Fahrlehrer",
+      "beschreibung": "Seit 01.10.2016 Teil des Teams."
+    },
+    {
+      "name": "Stephanie",
+      "rolle": "Büro",
+      "beschreibung": "Sorgt für den reibungslosen internen Ablauf."
+    }
+  ],
+  "kontakt": {
+    "email": "",
+    "telefon_peter": "01714869024",
+    "telefon_matthias": "01773193510",
+    "telefon_frank": "015778985301",
+    "adresse": "Borgfelder Heerstraße 36",
+    "stadt": "Bremen",
+    "plz": "28357"
+  },
+  "oeffnungszeiten": "Bürozeit: Dienstags von 17:00 – 19:00 Uhr",
+  "bilder": {
+    "logo": "images/original/logo.jpg",
+    "hero": "images/original/hero.jpg",
+    "team": [],
+    "leistungen": []
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {},
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": true,
+  "besonderheiten": [
+    "Unfallversicherung für Fahrschüler inklusive (auf dem Weg zur Fahrschule, im Unterricht, beim Fahren)",
+    "Mitglied im Fahrlehrerverband Bremen"
+  ]
+}

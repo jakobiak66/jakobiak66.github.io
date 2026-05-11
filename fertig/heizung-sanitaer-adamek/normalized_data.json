@@ -1,0 +1,67 @@
+{
+  "firma": "Ralf Adamek - Heizung Sanitär",
+  "slogan": "Meisterbetrieb für Heizung und Bad in Berlin",
+  "beschreibung": "Meisterbetrieb Ralf Adamek ist seit dem 02.12.2003 für Kunden in Berlin und Brandenburg tätig. Spezialisiert auf Heizungs- und Warmwassersysteme sowie moderne Badgestaltung. GASAG-Vertragspartner, Berliner Wasserbetriebe zertifiziert.",
+  "branche": "SHK / Heizung / Sanitär / Bad / Berlin",
+  "leistungen": [
+    "Wartungen und Reparaturen von Heizungsanlagen",
+    "Austausch von Heizungsanlagen",
+    "Komplette Hausneuinstallationen (Heizung & Sanitär)",
+    "Badsanierungen und altersgerechte Umbauten",
+    "Einbau von Duschen",
+    "Fliesenarbeiten",
+    "Solarthermie",
+    "Wärmepumpen",
+    "Holz-/Pelletanlagen",
+    "Trinkwasserhygiene",
+    "Energiesparberatung"
+  ],
+  "team": [
+    {
+      "name": "Ralf Adamek",
+      "rolle": "Inhaber / Installateur- und Heizungsbaumeister",
+      "bild": "images/original/monteur.jpg"
+    }
+  ],
+  "kontakt": {
+    "email": "firmaadamek@aol.com",
+    "telefon": "030 - 625 99 99",
+    "mobil": "0177 - 935 25 47",
+    "adresse": "Jonasstrasse 29",
+    "stadt": "Berlin",
+    "plz": "12053"
+  },
+  "oeffnungszeiten": "",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": ["images/original/monteur.jpg"],
+    "leistungen": [
+      "images/original/heizung.png",
+      "images/original/bad.png",
+      "images/original/armatur.png"
+    ]
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {},
+  "partner": [
+    "Buderus",
+    "Junkers",
+    "Vaillant",
+    "Viessmann",
+    "Brötje",
+    "GASAG",
+    "Berliner Wasserbetriebe",
+    "Netzgesellschaft Berlin"
+  ],
+  "zertifikate": [
+    "Handwerkskammer Berlin",
+    "GASAG-Erdgas Vertragspartner",
+    "Berliner Wasserbetriebe zertifiziert",
+    "Netzgesellschaft eingetragen"
+  ],
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": true,
+  "gruendungsdatum": "02.12.2003"
+}

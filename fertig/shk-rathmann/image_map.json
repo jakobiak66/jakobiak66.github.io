@@ -1,0 +1,27 @@
+{
+  "logo": "images/original/logo.jpg",
+  "hero": "images/original/hero.jpg",
+  "team": [],
+  "leistungen": [
+    "images/original/heizung.png",
+    "images/original/sanitaer.png",
+    "images/original/solar.png"
+  ],
+  "galerie": [
+    "images/original/referenz-1.jpg",
+    "images/original/referenz-2.jpg",
+    "images/original/referenz-3.jpg",
+    "images/original/referenz-4.jpg",
+    "images/original/referenz-5.jpg"
+  ],
+  "sonstige": [],
+  "quellen": {
+    "logo": "https://www.shk-rathmann.de/s/misc/logo.jpg",
+    "hero": "https://www.shk-rathmann.de/s/img/emotionheader.jpg",
+    "heizung": "https://www.shk-rathmann.de/s/cc_images/thumb_12307904.png",
+    "sanitaer": "https://www.shk-rathmann.de/s/cc_images/thumb_12307905.png",
+    "solar": "https://www.shk-rathmann.de/s/cc_images/thumb_12307906.png",
+    "referenz_1": "https://www.shk-rathmann.de/s/cc_images/cache_8588506.jpg",
+    "referenz_2": "https://www.shk-rathmann.de/s/cc_images/cache_8588937.jpg"
+  }
+}

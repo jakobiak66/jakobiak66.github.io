@@ -1,0 +1,27 @@
+# Node
+node_modules/
+dist/
+.cache/
+
+# Build outputs (individual projects - nicht ins Repo)
+fertig/*/website/node_modules/
+fertig/*/website/dist/
+fertig/*/website/.cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Env
+.env
+.env.local
+
+fertig/*/raw_crawl.json

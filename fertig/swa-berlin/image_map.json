@@ -1,0 +1,41 @@
+{
+  "logo": {
+    "gefunden": true,
+    "pfad": "images/original/logo.png",
+    "quell_url": "https://swa.berlin/fileadmin/_processed_/0/9/csm_Logo_SWA_65Prozent-removebg_1f451f4ac6.png",
+    "notiz": "Logo-URL direkt im Crawl gefunden (removebg-Version ohne Hintergrund)."
+  },
+  "hero": "images/original/hero.jpg",
+  "hero_quell_url": "https://swa.berlin/fileadmin/_processed_/e/7/csm_SWA_STO101_001_91adba1aeb.jpg",
+  "team": [],
+  "leistungen": [],
+  "referenzen": [
+    {
+      "beschreibung": "E1 Energiemanagement – Pankstraße Berlin",
+      "pfad": "images/original/referenz-e1.png",
+      "quell_url": "https://swa.berlin/fileadmin/_processed_/6/d/csm_E1_Energiemanagement_Pankstr_5e01e3dfdc.png"
+    },
+    {
+      "beschreibung": "Tropical Islands – OHANA Hotel",
+      "pfad": "images/original/referenz-tropical.jpg",
+      "quell_url": "https://swa.berlin/fileadmin/_processed_/b/d/csm_TIB_OHANA_Hotel_aa85b924c8.jpg"
+    },
+    {
+      "beschreibung": "dopa Firmensitz",
+      "pfad": "images/original/referenz-dopa.jpg",
+      "quell_url": "https://swa.berlin/fileadmin/_processed_/5/5/csm_dopa_Firmensitz_5ff6243cd9.jpg"
+    },
+    {
+      "beschreibung": "AEMtec Luftaufnahme",
+      "pfad": "images/original/referenz-aemtec.jpg",
+      "quell_url": "https://swa.berlin/fileadmin/_processed_/6/f/csm_21407_AEMtec_Gesamtansicht_Luftaufnahme_3abb3a9015.jpg"
+    },
+    {
+      "beschreibung": "Torhaus Projekt",
+      "pfad": "images/original/referenz-torhaus.jpg",
+      "quell_url": "https://swa.berlin/fileadmin/_processed_/5/d/csm_torhaus2-02_a327079fe2.jpg"
+    }
+  ],
+  "galerie": [],
+  "sonstige": []
+}

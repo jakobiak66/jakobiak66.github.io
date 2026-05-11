@@ -1,0 +1,16 @@
+{
+  "name": "zeal-security-blueprint",
+  "beschreibung": "Umfangreiches Sicherheitsdienstleistungs-Template. Dunkles Design mit Cyan-Akzenten. 16+ Seiten: Leistungen (Personenschutz, Objektschutz, etc.), Branchen, Karriere, Referenzen, WhatsApp-Button.",
+  "stil": "dunkel, futuristisch, professionell, Cyan, seriös",
+  "geeignet_fuer": ["sicherheit", "security", "bewachung", "wachdienst", "personenschutz", "objektschutz", "veranstaltungsschutz", "brandschutz"],
+  "seiten": ["Home", "Personenschutz", "Objektschutz", "Veranstaltungsschutz", "Wertschutz", "Brandschutz", "Retailschutz", "Hotellerie & Luxus", "Kultur & Museen", "Unternehmen & Industrie", "Öffentlich & Events", "Kontakt", "Über uns", "Referenzen", "Karriere", "Impressum", "Datenschutz", "AGB", "Barrierefreiheit"],
+  "hauptdatei": "src/App.tsx",
+  "css_variablen_datei": "src/index.css",
+  "komponenten_ordner": "src/components",
+  "platzhalter": ["Firmenname", "Slogan", "Beschreibung", "Leistungen", "Branchen", "Team", "Referenzen", "Kontakt"],
+  "bild_platzhalter": [],
+  "farb_variablen": ["--primary", "--secondary", "--background", "--foreground", "--accent", "--muted"],
+  "erweiterbar": true,
+  "technologie": "React + TypeScript + Tailwind + Vite + react-router-dom + react-helmet-async",
+  "besonderheiten": ["WhatsApp-Button", "16+ Seiten", "Dunkles Design", "Branchen-Seiten", "Karriere", "Referenzen", "AGB", "Barrierefreiheit", "Helmet SEO"]
+}

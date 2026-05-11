@@ -1,0 +1,8 @@
+{
+  "alte_website_seiten": ["Home", "PKW-Ausbildung", "Zweirad-Ausbildung", "Simulator-Ausbildung", "ASF (Aufbauseminar)", "Bezahlung", "Stundenpläne", "Standorte (9x)", "Senioren", "Partner", "Jobs", "Kontakt", "FAQ + AGB", "Datenschutz", "Impressum"],
+  "template_seiten": ["Home", "Leistungen", "Über uns", "Prozess", "Garantien", "Testimonials", "FAQ", "Kontakt"],
+  "seiten_vorhanden": ["Home", "Leistungen (PKW/Zweirad/LKW/Simulator)", "FAQ", "Kontakt", "Impressum", "Datenschutz"],
+  "seiten_fehlend_im_template": ["ASF (Aufbauseminar)", "Stundenpläne", "Standorte/Niederlassungen", "Senioren-Training", "Jobs/Karriere", "Bezahlung"],
+  "seiten_nur_im_template": ["Garantien", "Testimonials"],
+  "neue_seiten_erstellen": ["Standorte-Übersicht", "ASF-Sektion", "Jobs-Sektion"]
+}

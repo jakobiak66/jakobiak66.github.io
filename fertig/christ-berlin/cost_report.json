@@ -1,0 +1,63 @@
+﻿{
+    "url":  "https://christ-berlin.de/",
+    "datum":  "2026-05-11",
+    "seiten":  {
+                   "alte_website":  15,
+                   "neu_erstellt":  0,
+                   "gesamt_final":  8,
+                   "template_original":  8
+               },
+    "projektname":  "christ-berlin",
+    "qualitaet":  {
+                      "felder_fehlend":  [
+
+                                         ],
+                      "felder_gefunden":  [
+                                              "firma",
+                                              "beschreibung",
+                                              "branche",
+                                              "leistungen",
+                                              "kontakt"
+                                          ],
+                      "farben_uebertragen":  [
+                                                 "primaer",
+                                                 "sekundaer",
+                                                 "akzent"
+                                             ],
+                      "bilder_fehlend":  [
+                                             "logo.png",
+                                             "hero.jpg"
+                                         ],
+                      "score":  72,
+                      "seiten_generiert":  [
+                                               "Home",
+                                               "Leistungen",
+                                               "Kontakt",
+                                               "Footer"
+                                           ],
+                      "template_gewaehlt":  "zeal-security-blueprint"
+                  },
+    "gesamt_kosten_usd":  0.02,
+    "anthropic":  {
+                      "kosten_usd":  0.005,
+                      "output_tokens":  5000,
+                      "input_tokens":  15000
+                  },
+    "firecrawl":  {
+                      "kosten_usd":  0.015,
+                      "dauer_sekunden":  120,
+                      "seiten_gecrawlt":  15
+                  },
+    "bilder":  {
+                   "gefiltert":  0,
+                   "gefunden":  0,
+                   "logo_gefunden":  false,
+                   "gesamt_groesse_mb":  0,
+                   "heruntergeladen":  0
+               },
+    "farben":  {
+                   "gefunden":  0,
+                   "uebertragen":  true,
+                   "quelle":  "generiert"
+               }
+}

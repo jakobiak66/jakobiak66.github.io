@@ -1,0 +1,16 @@
+{
+  "primaer": "#b8960c",
+  "sekundaer": "#1a1a1a",
+  "akzent": "#d4a017",
+  "hintergrund": "#0d0d0d",
+  "text": "#f5f5f5",
+  "text_hell": "#999999",
+  "button": "#b8960c",
+  "button_hover": "#9a7d0a",
+  "quelle": "generiert",
+  "kommentar": "Nur #000000 und #e1306c (Instagram) aus HTML extrahiert. Generierte Goldton-Palette passend zur Goldschmiede-Branche: Gold (#b8960c, #d4a017) auf dunklem Hintergrund (#0d0d0d) – klassisches Juwelier-Design.",
+  "alle_gefundenen": [
+    "#000000",
+    "#e1306c"
+  ]
+}

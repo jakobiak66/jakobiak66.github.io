@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Rebuild Automation V3 – Portfolio</title>
+  <meta name="description" content="Automatisch generierte Kundenwebseiten – 13 moderne Websites aus dem Website Rebuild Automation System V3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: #1e1e2e;
+      --text: #e2e2f0;
+      --muted: #888899;
+      --accent: #6366f1;
+      --accent-glow: #6366f133;
+      --green: #22c55e;
+      --radius: 12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Header ─────────────────────────────── */
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .logo-mark {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.2rem;
+    }
+    .logo-text { font-size: 1rem; font-weight: 700; }
+    .logo-sub { font-size: 0.7rem; color: var(--muted); margin-top: 1px; }
+    .header-badge {
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* ─── Hero ───────────────────────────────── */
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+    .hero p {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+    }
+    .stat { text-align: center; }
+    .stat-value { font-size: 2rem; font-weight: 800; color: var(--accent); }
+    .stat-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.2rem; }
+
+    /* ─── Grid ───────────────────────────────── */
+    .grid-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      padding-left: 0.25rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px -8px var(--accent-glow);
+    }
+    .card:hover::before { opacity: 1; }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .card-avatar {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .card-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .card-firma {
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.2;
+    }
+    .card-domain {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .card-badge {
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      white-space: nowrap;
+      border: 1px solid;
+    }
+    .card-info {
+      display: flex;
+      gap: 1.25rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .card-info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .card-info-label {
+      font-size: 0.6rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .card-info-value {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .card-score {
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .score-high { color: #22c55e; }
+    .score-med  { color: #f59e0b; }
+    .score-low  { color: #ef4444; }
+
+    .card-arrow {
+      position: absolute;
+      bottom: 1.5rem; right: 1.5rem;
+      color: var(--accent);
+      opacity: 0;
+      transition: opacity 0.15s, transform 0.15s;
+      font-size: 1.2rem;
+    }
+    .card:hover .card-arrow {
+      opacity: 1;
+      transform: translateX(3px);
+    }
+
+    /* ─── Footer ─────────────────────────────── */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .header { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 3rem 1.5rem 2rem; }
+      .hero-stats { gap: 1.5rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-logo">
+    <div class="logo-mark">W</div>
+    <div>
+      <div class="logo-text">Website Rebuild Automation</div>
+      <div class="logo-sub">13 Kundenwebseiten · V3 · 2026</div>
+    </div>
+  </div>
+  <div class="header-badge">✓ 13 Websites live</div>
+</header>
+
+<section class="hero">
+  <div class="hero-tag">
+    <span>⚡</span> Auto-generiert mit Claude AI
+  </div>
+  <h1>Alle Kundenwebseiten auf einen Blick</h1>
+  <p>
+    Alte Websites automatisch analysiert, moderne Templates befüllt und
+    direkt auf GitHub Pages deployed – 13 Projekte in einem Durchlauf.
+  </p>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-value">13</div>
+      <div class="stat-label">Websites</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">$0.22</div>
+      <div class="stat-label">Gesamt-Kosten</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">163</div>
+      <div class="stat-label">Seiten gecrawlt</div>
+    </div>
+  </div>
+</section>
+
+<main class="grid-container">
+  <div class="section-label">→ Klicken Sie auf eine Website um sie zu öffnen</div>
+
+  <div class="grid">
+
+    <!-- 1 haustechnik-hun -->
+    <a href="./haustechnik-hun/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#1a3a6b22;color:#1a3a6b">H</div>
+          <div class="card-meta">
+            <div class="card-firma">Haustechnik Hun</div>
+            <div class="card-domain">haustechnik-hun.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#22c55e22;color:#22c55e;border-color:#22c55e44">SHK</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">handwerker-klon</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">12</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-high">95/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 2 heizung-sanitaer-adamek -->
+    <a href="./heizung-sanitaer-adamek/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#d9770622;color:#d97706">A</div>
+          <div class="card-meta">
+            <div class="card-firma">Heizung Sanitär Adamek</div>
+            <div class="card-domain">hs-adamek.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#22c55e22;color:#22c55e;border-color:#22c55e44">SHK+Solar</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">hlr-websiteentwurf</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">12</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-high">92/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 3 shk-rathmann -->
+    <a href="./shk-rathmann/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#0ea5e922;color:#0ea5e9">R</div>
+          <div class="card-meta">
+            <div class="card-firma">SHK Rathmann</div>
+            <div class="card-domain">shk-rathmann.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#22c55e22;color:#22c55e;border-color:#22c55e44">SHK</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">handwerker-klon</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">15</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-high">90/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 4 christ-berlin -->
+    <a href="./christ-berlin/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#334c9822;color:#334c98">C</div>
+          <div class="card-meta">
+            <div class="card-firma">Alexander Christ GmbH</div>
+            <div class="card-domain">christ-berlin.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#22c55e22;color:#22c55e;border-color:#22c55e44">Gebäudetechnik</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">hlr-websiteentwurf</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">12</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-high">82/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 5 swa-berlin -->
+    <a href="./swa-berlin/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#1a3a6b22;color:#1a3a6b">S</div>
+          <div class="card-meta">
+            <div class="card-firma">SWA Berlin GmbH</div>
+            <div class="card-domain">swa.berlin</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#3b82f622;color:#3b82f6;border-color:#3b82f644">TGA</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">hlr-websiteentwurf</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">12</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-high">78/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 6 goldschmiede-cifci -->
+    <a href="./goldschmiede-cifci/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#b8960c22;color:#b8960c">G</div>
+          <div class="card-meta">
+            <div class="card-firma">Goldschmiede Cifci</div>
+            <div class="card-domain">goldschmiede-cifci.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#b8960c22;color:#b8960c;border-color:#b8960c44">Goldschmiede</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">zeal (angepasst)</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">7</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-high">78/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 7 susanneheitmann -->
+    <a href="./susanneheitmann/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#8b5cf622;color:#8b5cf6">S</div>
+          <div class="card-meta">
+            <div class="card-firma">Susanne Heitmann</div>
+            <div class="card-domain">susanneheitmann.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#8b5cf622;color:#8b5cf6;border-color:#8b5cf644">Coaching</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">sight-to-code-dream</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">15</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-med">70/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 8 fahrschulekolb -->
+    <a href="./fahrschulekolb/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#f43f5e22;color:#f43f5e">K</div>
+          <div class="card-meta">
+            <div class="card-firma">Fahrschule Kolb</div>
+            <div class="card-domain">fahrschulekolb.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#f43f5e22;color:#f43f5e;border-color:#f43f5e44">Fahrschule</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">sight-to-code-dream</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">15</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-med">70/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 9 yoga-kendra -->
+    <a href="./yoga-kendra/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#10b98122;color:#10b981">Y</div>
+          <div class="card-meta">
+            <div class="card-firma">Yoga Kendra</div>
+            <div class="card-domain">yoga-kendra.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#10b98122;color:#10b981;border-color:#10b98144">Yoga</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">sight-to-code-dream</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">15</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-med">70/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 10 sehrfit -->
+    <a href="./sehrfit/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#f97316 22;color:#f97316">F</div>
+          <div class="card-meta">
+            <div class="card-firma">SEHRFIT</div>
+            <div class="card-domain">sehrfit.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#f9731622;color:#f97316;border-color:#f9731644">Fitness</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">sight-to-code-dream</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">9</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-med">75/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 11 fahrschule-salman -->
+    <a href="./fahrschule-salman/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#6366f122;color:#6366f1">S</div>
+          <div class="card-meta">
+            <div class="card-firma">Fahrschule Salman</div>
+            <div class="card-domain">fahrschule-salman.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#6366f122;color:#6366f1;border-color:#6366f144">Fahrschule</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">sight-to-code-dream</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">12</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-med">72/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 12 fat-daddys-tattoo -->
+    <a href="./fat-daddys-tattoo/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#64748b22;color:#94a3b8">T</div>
+          <div class="card-meta">
+            <div class="card-firma">Fat Daddys Backyard</div>
+            <div class="card-domain">fat-daddys-tattoo.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#64748b22;color:#94a3b8;border-color:#64748b44">Tattoo</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">sight-to-code-dream</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">5</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-med">68/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+    <!-- 13 fahrschule-frank-dopf -->
+    <a href="./fahrschule-frank-dopf/" class="card">
+      <div class="card-header">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <div class="card-avatar" style="background:#ef444422;color:#ef4444">D</div>
+          <div class="card-meta">
+            <div class="card-firma">Fahrschule Frank Dopf</div>
+            <div class="card-domain">fahrschule-frank-dopf.de</div>
+          </div>
+        </div>
+        <div class="card-badge" style="background:#ef444422;color:#ef4444;border-color:#ef444444">Fahrschule</div>
+      </div>
+      <div class="card-info">
+        <div class="card-info-item">
+          <div class="card-info-label">Template</div>
+          <div class="card-info-value">sight-to-code-dream</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Seiten</div>
+          <div class="card-info-value">15</div>
+        </div>
+        <div class="card-info-item">
+          <div class="card-info-label">Score</div>
+          <div class="card-score score-med">72/100</div>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  Generiert mit Website Rebuild Automation V3 &middot; Claude AI &middot; Anthropic &middot; 2026
+</footer>
+
+</body>
+</html>

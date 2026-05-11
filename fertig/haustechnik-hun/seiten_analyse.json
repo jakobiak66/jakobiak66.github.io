@@ -1,0 +1,51 @@
+{
+  "alte_website_seiten": [
+    "Home",
+    "Über uns",
+    "Leistungen",
+    "Leistungen/Sanitärbereich",
+    "Leistungen/Gasinstallationen",
+    "Leistungen/Notdienst",
+    "Service",
+    "Aktuelles",
+    "Kontakt",
+    "Anfahrt",
+    "Impressum",
+    "Sitemap"
+  ],
+  "template_seiten": [
+    "Home",
+    "Über uns",
+    "Sanitär",
+    "Heizung",
+    "Wärmepumpe",
+    "Beratung",
+    "Kontakt",
+    "Karriere"
+  ],
+  "seiten_vorhanden": [
+    "Home",
+    "Über uns",
+    "Sanitär",
+    "Heizung",
+    "Kontakt"
+  ],
+  "seiten_fehlend_im_template": [
+    "Leistungen/Gasinstallationen",
+    "Leistungen/Notdienst",
+    "Service",
+    "Aktuelles",
+    "Anfahrt",
+    "Impressum"
+  ],
+  "seiten_nur_im_template": [
+    "Wärmepumpe",
+    "Beratung",
+    "Karriere"
+  ],
+  "neue_seiten_erstellen": [
+    "Notdienst",
+    "Aktuelles",
+    "Impressum"
+  ]
+}

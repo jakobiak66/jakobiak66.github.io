@@ -1,0 +1,50 @@
+{
+  "firma": "Goldschmiede Cifci",
+  "slogan": "Seit über 19 Jahren im Herzen Karlsruhes – Goldschmiedekunst auf höchstem Niveau",
+  "beschreibung": "Familienbetrieb in Karlsruhe seit 1992, gegründet von den Eltern in Aachen. Inhaber Serhat Cifci führt die Werkstatt seit 2005, seine Schwester Esra Cifci verstärkt das Team seit 2013. Schwerpunkt auf handwerklicher Goldschmiedekunst, Trauringen, Umarbeitungen und Reparaturen.",
+  "branche": "Goldschmiede / Juwelier",
+  "leistungen": [
+    "Individuelle Schmuckstücke",
+    "Trauringe & Verlobungsringe",
+    "Umarbeitungen",
+    "Reparaturen von Lieblingsschmuckstücken",
+    "Goldschmiedekunst nach Maß",
+    "Beratung & persönlicher Service"
+  ],
+  "team": [
+    {
+      "name": "Serhat Cifci",
+      "rolle": "Inhaber & Goldschmied",
+      "beschreibung": "Ausbildung an der renommierten Goldschmiedeschule Pforzheim, Gesellenjahre in Mannheim. Seit 2005 in eigenem Atelier in Karlsruhe."
+    },
+    {
+      "name": "Esra Cifci",
+      "rolle": "Team",
+      "beschreibung": "Seit 2013 Teil des Familienbetriebs."
+    }
+  ],
+  "kontakt": {
+    "email": "kontakt@goldschmiede-cifci.de",
+    "telefon": "0721/2032810",
+    "adresse": "Waldstraße 25",
+    "stadt": "Karlsruhe",
+    "plz": "76133"
+  },
+  "oeffnungszeiten": "",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": [
+      "images/original/team-serhat.jpg",
+      "images/original/team-esra.jpg"
+    ],
+    "leistungen": []
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {
+    "instagram": "https://www.instagram.com/cifcijewelrycustoms"
+  },
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": false
+}

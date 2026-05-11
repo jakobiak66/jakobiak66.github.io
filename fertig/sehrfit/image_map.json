@@ -1,0 +1,12 @@
+{
+  "logo": "images/original/logo.png",
+  "hero": "images/original/hero.jpg",
+  "team": ["images/original/trainer.jpg"],
+  "leistungen": ["images/original/training-1.jpg", "images/original/training-2.jpg", "images/original/training-3.jpg"],
+  "galerie": [],
+  "sonstige": [],
+  "urls_gefunden": [
+    "https://le-cdn.website-editor.net/s/296fabf9345b4d30a7648c4ddfd6f901/dms3rep/multi/opt/fullsizeoutput_1a-1920w.jpeg",
+    "https://le-cdn.website-editor.net/s/296fabf9345b4d30a7648c4ddfd6f901/dms3rep/multi/opt/Reinhard+M.Pfeiffer-1920w.jpg"
+  ]
+}

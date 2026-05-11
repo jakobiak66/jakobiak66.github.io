@@ -1,0 +1,16 @@
+{
+  "name": "pixel-perfect-clone-95586",
+  "beschreibung": "Anwaltskanzlei spezialisiert auf Strafrecht in Berlin. Rechtsgebiete (Strafrecht, Sexualstrafrecht, Körperverletzung, BtMG), Kanzlei-Seiten (Über mich, Bewertungen, Ablauf & Kosten), Blog, Notfall-Button.",
+  "stil": "seriös, dunkel, vertrauenswürdig, professionell",
+  "geeignet_fuer": ["anwalt", "kanzlei", "recht", "strafrecht", "rechtsberatung", "juristen"],
+  "seiten": ["Home", "Strafrecht Berlin", "Sexualstrafrecht", "Körperverletzung", "Betäubungsmittelrecht", "Über mich", "Bewertungen", "Ablauf & Kosten", "Blog", "Kontakt", "Notfall", "Fall prüfen", "Impressum", "Datenschutz"],
+  "hauptdatei": "src/router.tsx",
+  "css_variablen_datei": "src/styles.css",
+  "komponenten_ordner": "src/components",
+  "platzhalter": ["Anwaltsname", "Spezialisierung", "Kanzleiname", "Kontakt", "Blog-Artikel", "Rechtsgebiete"],
+  "bild_platzhalter": [],
+  "farb_variablen": ["--primary", "--secondary", "--background", "--foreground"],
+  "erweiterbar": true,
+  "technologie": "React + TypeScript + Tailwind v4 + Vite + TanStack Router",
+  "besonderheiten": ["Notfall-Button", "Fall prüfen Formular", "Blog-Bereich", "Bewertungen-Seite", "Dunkles Design", "TanStack Router"]
+}

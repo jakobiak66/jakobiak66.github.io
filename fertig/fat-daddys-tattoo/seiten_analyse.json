@@ -1,0 +1,8 @@
+{
+  "alte_website_seiten": ["Home", "Tätowierer (Galerie)", "Kontakt", "Anfahrt", "Impressum"],
+  "template_seiten": ["Home", "Leistungen", "Über uns", "Prozess", "Garantien", "Testimonials", "FAQ", "Kontakt"],
+  "seiten_vorhanden": ["Home", "Über uns/Team", "Kontakt", "Impressum"],
+  "seiten_fehlend_im_template": ["Galerie/Portfolio", "Anfahrt"],
+  "seiten_nur_im_template": ["Prozess", "Garantien", "Testimonials", "FAQ"],
+  "neue_seiten_erstellen": ["Galerie-Sektion mit Tattoo-Portfolio", "Anfahrt-Sektion"]
+}

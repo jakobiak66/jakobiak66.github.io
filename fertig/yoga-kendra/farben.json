@@ -1,0 +1,13 @@
+{
+  "primaer": "#a89900",
+  "sekundaer": "#f5f0e8",
+  "akzent": "#c4860a",
+  "hintergrund": "#fdfaf5",
+  "text": "#2d2416",
+  "text_hell": "#6b5a3e",
+  "button": "#a89900",
+  "button_hover": "#8a7d00",
+  "quelle": "extrahiert+generiert",
+  "alle_gefundenen": ["#a89900", "#848181"],
+  "hinweis": "Primärfarbe #a89900 aus HTML extrahiert. Weitere Farben als warme Erdtöne/Saffron für Yoga-Ästhetik generiert."
+}

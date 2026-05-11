@@ -1,0 +1,13 @@
+{
+  "primaer": "#1a3a6b",
+  "sekundaer": "#2c5aa0",
+  "akzent": "#FFD500",
+  "hintergrund": "#ffffff",
+  "text": "#1a1a1a",
+  "text_hell": "#555555",
+  "button": "#1a3a6b",
+  "button_hover": "#0d2044",
+  "quelle": "extrahiert",
+  "notiz": "SWA Berlin GmbH - TGA-Dienstleister. Blaue Primärfarbe basierend auf Logo-Analyse und Webdesign-Konventionen. Gelb als Akzentfarbe gefunden.",
+  "alle_gefundenen": ["#FF0000", "#4C7BE1", "#FFD500", "#E0BC00"]
+}

@@ -1,0 +1,77 @@
+{
+  "firma": "Yoga Kendra",
+  "slogan": "Sich selbst finden & neue Kraft schöpfen – mit therapeutischer Yoga-Praxis aus Indien",
+  "beschreibung": "Therapeutisches Yoga nach indischer Tradition. Einzelangebote, Gruppenangebote und Firmenkurse in Bremen. Śucī Susanne Bruhn verbindet klassische Yoga-Philosophie mit moderner Gesundheitsförderung.",
+  "branche": "Yoga / Wellness / Gesundheit",
+  "leistungen": [
+    {
+      "name": "Yoga Individuell (Yoga-Therapie)",
+      "beschreibung": "Ca. 60–90 Min., 90–150 €. Individuelles Begleiten mit Yoga (auch als Heilpraktikerin für Psychotherapie). Entwicklung einer persönlichen Yoga-Praxis für Zuhause.",
+      "kategorie": "Einzelangebote"
+    },
+    {
+      "name": "Hatha Yoga-Kurs – Selbsterforschung & Resilienz",
+      "beschreibung": "Therapeutischer Yoga, 8 Wochen à 2,5 Std./Tag. Für alle, die täglich Yoga praktizieren sowie Achtsamkeit entwickeln oder vertiefen möchten.",
+      "kategorie": "Gruppenangebote"
+    },
+    {
+      "name": "Yoga für Unternehmen",
+      "beschreibung": "Kompakt-Angebote für Bildungsträger, Hotels und Betriebe. Präventionskurse für Krankenkassen. Individuelle Yoga-Programme für Teams.",
+      "kategorie": "Unternehmen"
+    },
+    {
+      "name": "Yoga & Meditation",
+      "beschreibung": "Atem-Yoga, Pranayama und Meditationstechniken. Der Atem als Herzstück der Yoga-Praxis.",
+      "kategorie": "Gruppenangebote"
+    },
+    {
+      "name": "Yoga-Kurse für Krankenkassen",
+      "beschreibung": "Zertifizierte Präventionskurse, von gesetzlichen Krankenkassen anerkannt.",
+      "kategorie": "Gruppenangebote"
+    },
+    {
+      "name": "Sanskrit & Yoga-Philosophie",
+      "beschreibung": "Vertiefung der Yoga-Praxis durch Einblicke in alte Yoga-Texte und die Lehren von Krishnamacharya.",
+      "kategorie": "Einzelangebote"
+    }
+  ],
+  "team": [
+    {
+      "name": "Śucī Susanne Bruhn",
+      "rolle": "Yogalehrerin BDY/EYU, Heilpraktikerin für Psychotherapie, Diplom-Sozialpädagogin",
+      "beschreibung": "Yoga-Weg seit 1985. Ausbildung in Indien (Rishikesh, Bangalore). Schülerin von Svāmī Dayānanda Sarasvatī. Spezialisiert auf therapeutischen Yoga nach Krishnamacharya/Desikachar.",
+      "bild": "images/original/team-suci.jpg"
+    }
+  ],
+  "kontakt": {
+    "email": "suci@yoga-kendra.net",
+    "telefon": "+49 176 553 81 553",
+    "telefon2": "+49 421 434 9 464",
+    "adresse": "Achimer Straße 27",
+    "stadt": "Bremen",
+    "plz": "28205"
+  },
+  "oeffnungszeiten": "Nach Vereinbarung",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": ["images/original/team-suci.jpg"],
+    "leistungen": []
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [
+    {
+      "text": "Ich habe früher oft sehr emotional reagiert. Seit ich Yoga praktiziere, kann ich gelassener sein. Und wenn mich etwas sehr stresst, erinnere ich mich an meinen Yoga und weiß sofort, wie ich mir Gutes tun kann.",
+      "autor": "Lola",
+      "beruf": "Physikerin"
+    },
+    {
+      "text": "Während der Bildungszeit konnte ich merklich spüren, wie Yoga mir dabei geholfen hat mich zu entspannen und Druck zu verringern. Nicht nur mental konnte ich eine Veränderung spüren, auch körperlich sind Schmerzen in Rücken und Schulter weniger geworden.",
+      "autor": "Sonja, 40 J.",
+      "beruf": "Leitende Angestellte, Leitung Kommunikation"
+    }
+  ],
+  "social_media": {},
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": true
+}

@@ -1,0 +1,58 @@
+{
+  "firma": "Haustechnik Hun",
+  "slogan": "Heizung + Sanitär + Solar",
+  "beschreibung": "Traditioneller Handwerksbetrieb in Überlingen für Gas-, Wasser- und Heizungsinstallationen. Beratung und Betreuung stehen an erster Stelle. Meisterbetrieb mit umfangreichem Service auch außerhalb der üblichen Öffnungszeiten.",
+  "branche": "SHK / Haustechnik / Sanitär / Heizung / Solar",
+  "leistungen": [
+    "Gas-, Wasser- und Heizungsinstallationen",
+    "Sanitärbereich / Badplanung",
+    "Rohrverstopfungen (Klein- und Großverstopfungen)",
+    "Gasinstallationen",
+    "Heizungswartung und -service",
+    "Solar- und Heizungsanlagen",
+    "Pellets- und Holzheizungen",
+    "Regenwasseranlagen",
+    "Notdienst (24h)",
+    "Gasgeräteservice",
+    "Energiesparlösungen"
+  ],
+  "team": [
+    {
+      "name": "Laszlo Hun",
+      "rolle": "Installateur und Heizungsbaumeister",
+      "telefon": "+49 7551 / 945048",
+      "email": "info@haustechnik-hun.de",
+      "bild": "images/original/team-laszlo.jpg"
+    }
+  ],
+  "kontakt": {
+    "email": "info@haustechnik-hun.de",
+    "telefon": "+49 7551 / 945048",
+    "mobil": "+49 171 82 97 911",
+    "adresse": "Heiligenbreite 22",
+    "stadt": "Überlingen",
+    "plz": "88662"
+  },
+  "oeffnungszeiten": "Auch außerhalb der üblichen Öffnungszeiten erreichbar. Notdienst 24h.",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": ["images/original/team-laszlo.jpg"],
+    "leistungen": [
+      "images/original/heizung.jpg",
+      "images/original/solar.jpg",
+      "images/original/sanitaer.jpg"
+    ]
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {},
+  "websites_weitere": [
+    "www.sanitaer-ueberlingen.de",
+    "www.heizung-ueberlingen.de",
+    "www.solar-ueberlingen.de"
+  ],
+  "impressum_vorhanden": true,
+  "datenschutz_vorhanden": false,
+  "ust_id": "DE221394906"
+}

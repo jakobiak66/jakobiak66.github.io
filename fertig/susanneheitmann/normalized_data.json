@@ -1,0 +1,59 @@
+{
+  "firma": "Susanne Heitmann",
+  "slogan": "Bildende Künstlerin – Malerei, Siebdruck, Collage",
+  "beschreibung": "Susanne Heitmann ist freischaffende Künstlerin aus Osnabrück und Berlin. Ihr Schwerpunkt liegt auf Malerei (Leinwand und Papier) sowie Siebdruck. Seit 2005 ist sie als freischaffende Künstlerin tätig und zeigt ihre Werke in zahlreichen nationalen Ausstellungen.",
+  "branche": "Bildende Kunst",
+  "leistungen": [
+    "Malerei auf Leinwand",
+    "Malerei auf Papier",
+    "Siebdruck",
+    "Collagen",
+    "Kunstprojekte und Ausstellungen",
+    "Workshops in der Kunstvermittlung",
+    "Lehrtätigkeit in der Kunstvermittlung"
+  ],
+  "team": [
+    {
+      "name": "Susanne Heitmann",
+      "rolle": "Bildende Künstlerin",
+      "beschreibung": "1976-1982 Studium Agrarwissenschaften, Universität Bonn. 1993 Studium Kunst und Literaturwissenschaften, Universität Osnabrück. 2005 Magisterabschluss Freie Kunst. Studienaufenthalte in Paris, New York, Rom. Seit 2013 Atelier in Berlin, lebt und arbeitet in Berlin und Osnabrück."
+    }
+  ],
+  "kontakt": {
+    "email": "",
+    "telefon": "",
+    "adresse": "Jägerstraße 21",
+    "stadt": "Osnabrück",
+    "plz": "49084"
+  },
+  "oeffnungszeiten": "",
+  "bilder": {
+    "logo": "images/original/logo.png",
+    "hero": "images/original/hero.jpg",
+    "team": [],
+    "leistungen": [
+      "images/original/galerie-1.jpg",
+      "images/original/galerie-2.jpg",
+      "images/original/galerie-3.jpg"
+    ]
+  },
+  "farben": "farben.json",
+  "kundenstimmen": [],
+  "social_media": {
+    "website": "https://susanneheitmann.de"
+  },
+  "impressum_vorhanden": false,
+  "datenschutz_vorhanden": false,
+  "veranstaltungen": [
+    {
+      "titel": "Lange Nacht der Ateliers",
+      "datum": "Samstag, 20. Juni 2026, 18-24 Uhr",
+      "ort": "Ateliergemeinschaft alte Bäckerei, Jägerstraße 21, 49084 Osnabrück"
+    },
+    {
+      "titel": "Kunst in der Region – jurierte Ausstellung in DA Kloster Gravenhorst",
+      "datum": "17.10. bis 22.11.2026",
+      "ort": "DA Kloster Gravenhorst"
+    }
+  ]
+}

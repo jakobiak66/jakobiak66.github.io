@@ -1,0 +1,16 @@
+{
+  "name": "hlr-websiteentwurf",
+  "beschreibung": "SHK-Betrieb mit erweitertem Portfolio: Heizung, Sanitär, Gas, Solartechnik, Wohnraumlüftung, Wasseraufbereitung, Bad & Sanitärinstallation. Orange Markenfarbe (HLR), TanStack Router.",
+  "stil": "modern, handwerkorientiert, orange, professionell",
+  "geeignet_fuer": ["shk", "heizung", "sanitaer", "gas", "solar", "lueftung", "haustechnik", "installation", "bad"],
+  "seiten": ["Home", "Leistungen", "Heizung", "Sanitär", "Gas", "Wohnraumlüftung", "Wasseraufbereitung", "Solartechnik", "Bad & Sanitärinstallation", "Kontakt", "Über uns", "Impressum", "Datenschutz"],
+  "hauptdatei": "src/router.tsx",
+  "css_variablen_datei": "src/styles.css",
+  "komponenten_ordner": "src/components",
+  "platzhalter": ["Firmenname", "Slogan", "Beschreibung", "Telefon", "Email", "Adresse", "Leistungen"],
+  "bild_platzhalter": [],
+  "farb_variablen": ["--brand", "--brand-foreground", "--brand-dark", "--background", "--foreground", "--primary"],
+  "erweiterbar": true,
+  "technologie": "React + TypeScript + Tailwind v4 + Vite + TanStack Router",
+  "besonderheiten": ["TanStack Router", "Solar-Sektion", "Wohnraumlüftung", "Wasseraufbereitung", "Orange Markenfarbe", "Impressum/Datenschutz integriert"]
+}

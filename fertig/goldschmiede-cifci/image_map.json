@@ -1,0 +1,12 @@
+{
+  "logo": "images/original/logo.png",
+  "hero": "images/original/hero.jpg",
+  "team": [
+    "images/original/team-serhat.jpg",
+    "images/original/team-esra.jpg"
+  ],
+  "leistungen": [],
+  "galerie": [],
+  "sonstige": [],
+  "kommentar": "Die Goldschmiede-Website nutzt Strato-Editor. Keine direkt verlinkten Produktbilder im gecrawlten Markdown gefunden. Galerie-Bilder nur über JavaScript/Cookie-Consent geladen. Tracking-Pixel von strato-editor.com gefiltert. Kundenbilder bitte manuell in images/kunde/ ablegen."
+}

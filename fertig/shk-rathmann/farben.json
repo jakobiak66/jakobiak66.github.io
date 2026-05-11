@@ -1,0 +1,18 @@
+{
+  "primaer": "#e31203",
+  "sekundaer": "#333333",
+  "akzent": "#fd040a",
+  "hintergrund": "#ffffff",
+  "text": "#333333",
+  "text_hell": "#a0a0a0",
+  "button": "#e31203",
+  "button_hover": "#b50e02",
+  "quelle": "extrahiert",
+  "kommentar": "Primärfarbe Rot (#e31203) aus HTML extrahiert (3x gefunden), sekundäres Rot (#fd040a) ebenfalls extrahiert. Typisches Rot/Weiß Schema für Handwerksbetriebe.",
+  "alle_gefundenen": [
+    "#e31203",
+    "#fd040a",
+    "#a0a0a0",
+    "#000000"
+  ]
+}

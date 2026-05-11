@@ -1,0 +1,40 @@
+{
+  "logo": {
+    "gefunden": false,
+    "pfad": "images/original/logo.png",
+    "quell_url": null,
+    "notiz": "Logo nicht direkt gefunden. Versuche mit /logo.png, /wp-content/uploads/logo.png fehlgeschlagen."
+  },
+  "hero": "images/original/hero.jpg",
+  "hero_quell_url": null,
+  "team": [],
+  "leistungen": [
+    {
+      "beschreibung": "Heizung",
+      "pfad": "images/original/heizung.png",
+      "quell_url": "https://christ-berlin.de/wp-content/uploads/2021/04/Heizung.png"
+    },
+    {
+      "beschreibung": "Sanitär",
+      "pfad": "images/original/sanitaer.png",
+      "quell_url": "https://christ-berlin.de/wp-content/uploads/2021/04/Sanitaer.png"
+    },
+    {
+      "beschreibung": "Schornsteinbau",
+      "pfad": "images/original/schornsteinbau.png",
+      "quell_url": "https://christ-berlin.de/wp-content/uploads/2021/04/Schornsteinbau.png"
+    },
+    {
+      "beschreibung": "Energieberatung",
+      "pfad": "images/original/energieberatung.png",
+      "quell_url": "https://christ-berlin.de/wp-content/uploads/2021/04/Energieberatung.png"
+    },
+    {
+      "beschreibung": "Solar-/Photovoltaikanlagen",
+      "pfad": "images/original/solar.png",
+      "quell_url": "https://christ-berlin.de/wp-content/uploads/2021/04/Solaranlagen.png"
+    }
+  ],
+  "galerie": [],
+  "sonstige": []
+}

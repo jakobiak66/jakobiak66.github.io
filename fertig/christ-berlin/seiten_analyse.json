@@ -1,0 +1,65 @@
+{
+  "alte_website_seiten": [
+    "Home",
+    "Leistungen",
+    "Leistungen/Heizung",
+    "Leistungen/Sanitär",
+    "Leistungen/Schornsteinbau",
+    "Leistungen/Energieberatung",
+    "Leistungen/Kamine",
+    "Leistungen/Solar-Photovoltaikanlagen",
+    "Leistungen/Regenwassernutzung",
+    "Philosophie",
+    "Download",
+    "Kontakt",
+    "Impressum",
+    "Datenschutz",
+    "Blog/Aktuelles"
+  ],
+  "template_seiten": [
+    "Home",
+    "Leistungen",
+    "Heizung",
+    "Sanitär",
+    "Gas",
+    "Wohnraumlüftung",
+    "Wasseraufbereitung",
+    "Solartechnik",
+    "Bad & Sanitärinstallation",
+    "Kontakt",
+    "Über uns",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "seiten_vorhanden": [
+    "Home",
+    "Leistungen",
+    "Heizung",
+    "Sanitär",
+    "Solartechnik",
+    "Kontakt",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "seiten_fehlend_im_template": [
+    "Schornsteinbau",
+    "Energieberatung",
+    "Kamine",
+    "Regenwassernutzung",
+    "Philosophie",
+    "Download",
+    "Blog/Aktuelles"
+  ],
+  "seiten_nur_im_template": [
+    "Gas",
+    "Wohnraumlüftung",
+    "Wasseraufbereitung",
+    "Bad & Sanitärinstallation"
+  ],
+  "neue_seiten_erstellen": [
+    "Schornsteinbau",
+    "Energieberatung",
+    "Kamine",
+    "Philosophie"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "logo": "images/original/logo.png",
+  "logo_url_original": "https://www.yoga-kendra.net/gallery/Yoga-Kendra-Header.png",
+  "hero": "images/original/hero.jpg",
+  "team": ["images/original/team-suci.jpg"],
+  "leistungen": [],
+  "galerie": [],
+  "sonstige": [
+    "images/original/lotus.jpg"
+  ],
+  "hinweis": "Logo-URL gefunden: https://www.yoga-kendra.net/gallery/Yoga-Kendra-Header.png (Header-Bild). Lotus-Icon: https://www.yoga-kendra.net/gallery/Lotus_klein-sm.jpg"
+}

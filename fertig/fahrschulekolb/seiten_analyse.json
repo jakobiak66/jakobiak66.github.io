@@ -1,0 +1,55 @@
+{
+  "alte_website_seiten": [
+    "Home / Willkommen",
+    "Über uns (Geschichte der Fahrschule)",
+    "Führerscheinklassen (AM, A1, A2, A, B, BE, L)",
+    "Unser Team",
+    "Unterricht / Theorieunterricht",
+    "Neuigkeiten",
+    "Kontakt",
+    "Info",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "template_seiten": [
+    "Home",
+    "Leistungen / Führerscheinklassen",
+    "Über uns",
+    "Team",
+    "Kontakt",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "seiten_vorhanden": [
+    "Home",
+    "Über uns",
+    "Team",
+    "Kontakt",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "seiten_fehlend_im_template": [
+    "Führerscheinklassen (detaillierte Übersicht)",
+    "Unterricht / Ausbildungsfahrzeuge",
+    "Neuigkeiten / Blog",
+    "Info / Bürozeiten / Preise"
+  ],
+  "seiten_nur_im_template": [],
+  "neue_seiten_erstellen": [
+    "Führerscheinklassen",
+    "Unterricht",
+    "Neuigkeiten"
+  ],
+  "branche": "Fahrschule",
+  "template_empfehlung": "sight-to-code-dream",
+  "template_scores": {
+    "sight-to-code-dream": 60,
+    "pixel-perfect-clone-52135": 45,
+    "handwerker-klon": 40,
+    "pixel-perfect-clone-95586": 30,
+    "hlr-websiteentwurf": 25,
+    "remix-of-pixel-perfect-clone": 25,
+    "zeal-security-blueprint": 15
+  },
+  "begruendung": "Fahrschule Kolb in Bremen ist eine klassische Dienstleistungsbranche ohne passendes Spezialtemplate. sight-to-code-dream ist minimalistisch und für alle Branchen geeignet. Die klare Struktur eignet sich gut für eine Fahrschul-Website mit Infos zu Klassen, Team und Kontakt."
+}

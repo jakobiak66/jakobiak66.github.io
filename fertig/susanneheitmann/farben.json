@@ -1,0 +1,13 @@
+{
+  "primaer": "#2c3e50",
+  "sekundaer": "#7f8c8d",
+  "akzent": "#c0392b",
+  "hintergrund": "#ffffff",
+  "text": "#2c3e50",
+  "text_hell": "#7f8c8d",
+  "button": "#c0392b",
+  "button_hover": "#a93226",
+  "quelle": "generiert",
+  "kommentar": "Keine CSS-Farbvariablen im gecrawlten HTML gefunden. Generierte professionelle Farben passend zur Kunstbranche: dunkles Anthrazit als Primärfarbe, Weinrot als Akzent (klassisch für Kunst-Websites).",
+  "alle_gefundenen": []
+}

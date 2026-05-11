@@ -1,0 +1,8 @@
+{
+  "alte_website_seiten": ["Startseite", "Über uns", "Führerscheinklassen", "Theorie & Praxis", "Unsere Fahrschule", "Unsere Fahrzeuge", "Unser Team", "Kontakt", "Aktuelles", "Anfahrt", "Impressum"],
+  "template_seiten": ["Home", "Leistungen", "Über uns", "Prozess", "Garantien", "Testimonials", "FAQ", "Kontakt"],
+  "seiten_vorhanden": ["Home", "Leistungen/Führerscheinklassen", "Über uns", "Kontakt", "Impressum"],
+  "seiten_fehlend_im_template": ["Theorie & Praxis", "Unsere Fahrzeuge", "Unser Team", "Aktuelles", "Anfahrt"],
+  "seiten_nur_im_template": ["Garantien", "Testimonials", "FAQ"],
+  "neue_seiten_erstellen": ["Theorie-Praxis-Sektion", "Team-Sektion", "Anfahrt mit Map"]
+}

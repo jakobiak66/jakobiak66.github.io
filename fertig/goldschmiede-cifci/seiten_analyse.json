@@ -1,0 +1,45 @@
+{
+  "alte_website_seiten": [
+    "Startseite",
+    "Über uns",
+    "Galerie",
+    "Kontakt",
+    "Impressum"
+  ],
+  "template_seiten": [
+    "Home",
+    "Leistungen",
+    "Über uns",
+    "Galerie",
+    "Kontakt",
+    "Impressum",
+    "Datenschutz"
+  ],
+  "seiten_vorhanden": [
+    "Home",
+    "Über uns",
+    "Galerie",
+    "Kontakt",
+    "Impressum"
+  ],
+  "seiten_fehlend_im_template": [],
+  "seiten_nur_im_template": [
+    "Leistungen",
+    "Datenschutz"
+  ],
+  "neue_seiten_erstellen": [
+    "Leistungen (Trauringe, Umarbeitungen, Reparaturen, individuelle Schmuckstücke)"
+  ],
+  "branche": "Goldschmiede / Juwelier",
+  "template_empfehlung": "pixel-perfect-clone-95586",
+  "template_scores": {
+    "pixel-perfect-clone-95586": 65,
+    "sight-to-code-dream": 60,
+    "pixel-perfect-clone-52135": 40,
+    "handwerker-klon": 20,
+    "hlr-websiteentwurf": 15,
+    "remix-of-pixel-perfect-clone": 15,
+    "zeal-security-blueprint": 10
+  },
+  "begruendung": "Goldschmiede Cifci ist ein traditionsreiches Juweliergeschäft in Karlsruhe. Das pixel-perfect-clone-95586 Template (dunkel, elegant) passt am besten zum gehobenen Handwerk. Alternativ sight-to-code-dream für einen minimalistischen Portfolio-Look. Wahl: pixel-perfect-clone-95586 wegen elegantem, dunklem Design passend zu Schmuck/Luxus."
+}
