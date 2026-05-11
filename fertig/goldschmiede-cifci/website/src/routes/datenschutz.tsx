@@ -1,18 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-export const Route = createFileRoute("/datenschutz")({
-  head: () => ({
-    meta: [
-      { title: "Datenschutz – Goldschmiede Cifci" },
-      { name: "description", content: "Datenschutzerklärung der Goldschmiede Cifci, Karlsruhe." },
-    ],
-  }),
-  component: DatenschutzPage,
-});
 
-function DatenschutzPage() {
+
+export default function DatenschutzPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

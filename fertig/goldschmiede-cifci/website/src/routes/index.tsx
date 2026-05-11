@@ -1,20 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Footer } from "@/components/site/Footer";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Gem, Heart, Wrench, Star, Instagram, ArrowRight } from "lucide-react";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Goldschmiede Cifci Karlsruhe – Individuelle Schmuckstücke & Trauringe" },
-      { name: "description", content: "Handgefertigte Schmuckstücke, Trauringe und Verlobungsringe in Karlsruhe. Seit 1992 steht die Goldschmiede Cifci für höchste Qualität und persönliche Beratung." },
-      { property: "og:title", content: "Goldschmiede Cifci – Goldschmiedekunst in Karlsruhe" },
-    ],
-  }),
-  component: Index,
-});
+
 
 const leistungen = [
   {
@@ -34,7 +24,7 @@ const leistungen = [
   },
 ];
 
-function Index() {
+export default function Index() {
   return (
     <main>
       <Header />

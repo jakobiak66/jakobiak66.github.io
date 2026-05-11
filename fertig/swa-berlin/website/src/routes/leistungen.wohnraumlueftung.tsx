@@ -1,31 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { LeistungLayout } from "@/components/site/LeistungLayout";
 import wohnraumHero from "@/assets/wohnraumlueftung-hero.png";
 import wohnraumGallery1 from "@/assets/wohnraumlueftung-gallery-1.png";
 import wohnraumGallery3 from "@/assets/wohnraumlueftung-gallery-3.png";
 import wohnraumGallery4 from "@/assets/wohnraumlueftung-gallery-4.png";
 
-export const Route = createFileRoute("/leistungen/wohnraumlueftung")({
-  component: Page,
-  head: () => ({
-    meta: [
-      { title: "Wohnraumlüftung – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        name: "description",
-        content:
-          "Frische Luft ohne Wärmeverlust – kontrollierte Wohnraumlüftung mit Wärme- und Feuchterückgewinnung.",
-      },
-      { property: "og:title", content: "Wohnraumlüftung – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        property: "og:description",
-        content:
-          "Kontrollierte Wohnraumlüftung sorgt für ein gesundes Raumklima bei minimalem Energieverlust.",
-      },
-    ],
-  }),
-});
 
-function Page() {
+
+export default function Page() {
   return (
     <LeistungLayout
       title="Wohnraumlüftung"

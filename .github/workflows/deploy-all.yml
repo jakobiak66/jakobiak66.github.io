@@ -16,10 +16,8 @@ concurrency:
 
 jobs:
   # ─────────────────────────────────────────────
-  # 10 Standard Vite+React Websites parallel bauen
-  # (christ-berlin, swa-berlin, goldschmiede-cifci
-  #  benötigen Cloudflare/SSR und werden separat
-  #  als Placeholder eingebunden)
+  # Alle 13 Websites parallel bauen
+  # (alle jetzt standard Vite+React+react-router-dom)
   # ─────────────────────────────────────────────
   build:
     name: "Build: ${{ matrix.project }}"
@@ -38,6 +36,9 @@ jobs:
           - { project: fahrschule-salman,       path: fertig/fahrschule-salman/website }
           - { project: fat-daddys-tattoo,       path: fertig/fat-daddys-tattoo/website }
           - { project: fahrschule-frank-dopf,   path: fertig/fahrschule-frank-dopf/website }
+          - { project: christ-berlin,           path: fertig/christ-berlin/website }
+          - { project: swa-berlin,              path: fertig/swa-berlin/website }
+          - { project: goldschmiede-cifci,      path: fertig/goldschmiede-cifci/website }
 
     steps:
       - name: Checkout
@@ -104,10 +105,11 @@ jobs:
           mkdir -p dist
           cp fertig/alle_websites_deploy/index.html dist/index.html
 
-          # 10 React-Projekte einfügen
+          # Alle 13 Projekte einfügen
           for proj in haustechnik-hun heizung-sanitaer-adamek shk-rathmann \
                       susanneheitmann fahrschulekolb yoga-kendra sehrfit \
-                      fahrschule-salman fat-daddys-tattoo fahrschule-frank-dopf; do
+                      fahrschule-salman fat-daddys-tattoo fahrschule-frank-dopf \
+                      christ-berlin swa-berlin goldschmiede-cifci; do
             src="artifacts/dist-${proj}"
             if [ -d "$src" ] && [ -f "${src}/index.html" ]; then
               mkdir -p "dist/${proj}"
@@ -118,42 +120,6 @@ jobs:
             fi
           done
 
-          # 3 TanStack/Cloudflare Projekte als Placeholder
-          # (benötigen Cloudflare Workers, nicht kompatibel mit GitHub Pages)
-          for proj_info in \
-            "christ-berlin|Alexander Christ GmbH|Gebäudetechnik · Berlin" \
-            "swa-berlin|SWA Berlin GmbH|TGA-Haustechnik · Berlin" \
-            "goldschmiede-cifci|Goldschmiede Cifci|Goldschmiedekunst · Karlsruhe"; do
-            proj="${proj_info%%|*}"
-            rest="${proj_info#*|}"
-            firma="${rest%%|*}"
-            sub="${rest#*|}"
-            mkdir -p "dist/${proj}"
-            cat > "dist/${proj}/index.html" <<HTML
-          <!DOCTYPE html><html lang="de"><head><meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width,initial-scale=1">
-          <title>${firma}</title>
-          <style>
-            *{box-sizing:border-box;margin:0;padding:0}
-            body{font-family:system-ui,sans-serif;background:#0a0a0f;color:#e2e2f0;
-                 display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center}
-            .c{max-width:480px;padding:2rem}
-            .tag{display:inline-block;background:#6366f133;border:1px solid #6366f1;
-                 color:#6366f1;padding:.3rem .8rem;border-radius:999px;font-size:.75rem;margin-bottom:1.5rem}
-            h1{font-size:1.75rem;font-weight:800;margin:.5rem 0}
-            p{color:#666;margin:1rem 0 2rem;font-size:.9rem;line-height:1.5}
-            a{display:inline-block;background:#6366f1;color:#fff;padding:.75rem 1.5rem;
-               border-radius:.5rem;text-decoration:none;font-weight:600}
-          </style></head>
-          <body><div class="c">
-            <div class="tag">Website</div>
-            <h1>${firma}</h1>
-            <p>${sub}<br><br>Diese Website nutzt serverseitiges Rendering<br>und wird separat gehostet.</p>
-            <a href="/">← Zur Übersicht</a>
-          </div></body></html>
-          HTML
-            echo "📄 Placeholder: ${proj}"
-          done
 
           echo ""
           echo "Gesamt: $(find dist -name 'index.html' | wc -l) Seiten"

@@ -1,5 +1,5 @@
 import { Flame, Droplets, Wind, Thermometer, Wrench, ArrowRight } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import familieImg from "@/assets/familie-leistungen.png";
 
 const items = [

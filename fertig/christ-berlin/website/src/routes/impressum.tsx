@@ -1,27 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-export const Route = createFileRoute("/impressum")({
-  component: Page,
-  head: () => ({
-    meta: [
-      { title: "Impressum – Dipl.-Ing. Alexander Christ GmbH" },
-      {
-        name: "description",
-        content:
-          "Impressum und Anbieterkennzeichnung der Dipl.-Ing. Alexander Christ GmbH in Berlin.",
-      },
-      { property: "og:title", content: "Impressum – Dipl.-Ing. Alexander Christ GmbH" },
-      {
-        property: "og:description",
-        content: "Impressum der Dipl.-Ing. Alexander Christ GmbH, Tegeler Straße 42-43, 13353 Berlin.",
-      },
-    ],
-  }),
-});
 
-function Page() {
+
+export default function Page() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

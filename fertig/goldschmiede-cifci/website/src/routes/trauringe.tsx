@@ -1,18 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Heart, ArrowRight } from "lucide-react";
 
-export const Route = createFileRoute("/trauringe")({
-  head: () => ({
-    meta: [
-      { title: "Trauringe & Verlobungsringe – Goldschmiede Cifci Karlsruhe" },
-      { name: "description", content: "Handgefertigte Trauringe und Verlobungsringe in Gold, Silber und Platin. Persönliche Beratung in der Goldschmiede Cifci, Karlsruhe." },
-    ],
-  }),
-  component: TrauringePage,
-});
+
 
 const ringstile = [
   { title: "Klassisch", desc: "Zeitlose Eleganz in schlichtem Design – für alle, die das Wesentliche schätzen." },
@@ -21,7 +12,7 @@ const ringstile = [
   { title: "Individuell", desc: "Komplett nach Ihren Wünschen – kein Ring gleicht dem anderen." },
 ];
 
-function TrauringePage() {
+export default function TrauringePage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

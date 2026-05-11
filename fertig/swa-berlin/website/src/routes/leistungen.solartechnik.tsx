@@ -1,28 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { LeistungLayout } from "@/components/site/LeistungLayout";
 import solar1 from "@/assets/solartechnik-1.png";
 import solar2 from "@/assets/solartechnik-2.png";
 
-export const Route = createFileRoute("/leistungen/solartechnik")({
-  head: () => ({
-    meta: [
-      { title: "Solartechnik – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        name: "description",
-        content:
-          "Emissionsschonend und wirtschaftlich heizen – Planung und Umsetzung von thermischen Solaranlagen und Photovoltaik.",
-      },
-      { property: "og:title", content: "Solartechnik – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        property: "og:description",
-        content: "Emissionsschonend & wirtschaftlich – Solartechnik vom Fachbetrieb HLR.",
-      },
-    ],
-  }),
-  component: SolartechnikPage,
-});
 
-function SolartechnikPage() {
+
+export default function SolartechnikPage() {
   return (
     <LeistungLayout
       title="Solartechnik"

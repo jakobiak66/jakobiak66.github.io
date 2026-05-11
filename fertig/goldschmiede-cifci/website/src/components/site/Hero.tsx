@@ -1,5 +1,5 @@
 import { ArrowRight, Gem } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 
 export function Hero() {
   return (

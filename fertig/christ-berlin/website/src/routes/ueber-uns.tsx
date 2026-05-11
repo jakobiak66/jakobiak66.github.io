@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
@@ -6,27 +5,9 @@ import { CtaBanner } from "@/components/site/CtaBanner";
 import teamPhoto from "@/assets/team-hlr.png";
 import heroBg from "@/assets/hero-heizung-sanitaer.png";
 
-export const Route = createFileRoute("/ueber-uns")({
-  component: UeberUnsPage,
-  head: () => ({
-    meta: [
-      { title: "Über uns – Dipl.-Ing. Alexander Christ GmbH" },
-      {
-        name: "description",
-        content:
-          "Lernen Sie die Dipl.-Ing. Alexander Christ GmbH kennen – Ihr Fachbetrieb für Gebäudetechnik in Berlin. Maßgeschneiderte Konzepte, persönliche Beratung, 24h-Notdienst.",
-      },
-      { property: "og:title", content: "Über uns – Dipl.-Ing. Alexander Christ GmbH" },
-      {
-        property: "og:description",
-        content:
-          "Modernes Berliner Gebäudetechnikunternehmen mit Schwerpunkten Heizung, Sanitär, Solar und Schornsteinbau.",
-      },
-    ],
-  }),
-});
 
-function UeberUnsPage() {
+
+export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />

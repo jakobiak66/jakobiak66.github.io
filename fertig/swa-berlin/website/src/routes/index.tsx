@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { ServiceCards } from "@/components/site/ServiceCards";
@@ -10,21 +9,9 @@ import { Faq } from "@/components/site/Faq";
 import { CtaBanner } from "@/components/site/CtaBanner";
 import { Footer } from "@/components/site/Footer";
 
-export const Route = createFileRoute("/")({
-  component: Index,
-  head: () => ({
-    meta: [
-      { title: "SWA Berlin GmbH – TGA-Haustechnik Berlin & Brandenburg" },
-      {
-        name: "description",
-        content:
-          "TGA-Fachbetrieb für Heizung, Sanitär, Lüftung und Kälte-Klima in Berlin und Brandenburg. Neubau, Modernisierung und Wartung. SWA Service Wartung Anlagenbau Berlin GmbH.",
-      },
-    ],
-  }),
-});
 
-function Index() {
+
+export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

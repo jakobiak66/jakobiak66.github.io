@@ -1,27 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-export const Route = createFileRoute("/datenschutz")({
-  component: Page,
-  head: () => ({
-    meta: [
-      { title: "Datenschutzerklärung – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        name: "description",
-        content:
-          "Informationen zum Datenschutz bei der SWA Service Wartung Anlagenbau Berlin GmbH in Berlin.",
-      },
-      { property: "og:title", content: "Datenschutzerklärung – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        property: "og:description",
-        content: "Informationen zum Datenschutz bei der SWA Service Wartung Anlagenbau Berlin GmbH.",
-      },
-    ],
-  }),
-});
 
-function Page() {
+
+export default function Page() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { LeistungCta } from "@/components/site/LeistungCta";
@@ -9,24 +8,7 @@ import heizungstechnik2 from "@/assets/heizungstechnik-2.png";
 import heizungstechnik3 from "@/assets/heizungstechnik-3.png";
 import heizungstechnik4 from "@/assets/heizungstechnik-waermepumpe.png";
 
-export const Route = createFileRoute("/leistungen/heizungstechnik")({
-  component: Page,
-  head: () => ({
-    meta: [
-      { title: "Heizungstechnik – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        name: "description",
-        content:
-          "Energiesparende Wohlfühlräume durch moderne Heizungstechnik – Neuinstallation, Modernisierung, Wärmepumpen, Brennwerttechnik und Wartung. Partner von Brötje.",
-      },
-      { property: "og:title", content: "Heizungstechnik – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        property: "og:description",
-        content: "Energiesparende Wohlfühlräume – Heizungstechnik vom Fachbetrieb HLR.",
-      },
-    ],
-  }),
-});
+
 
 const leistungen = [
   "Neuinstallation und Modernisierung",
@@ -38,7 +20,7 @@ const leistungen = [
   "Wartung und Reparatur",
 ];
 
-function Page() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

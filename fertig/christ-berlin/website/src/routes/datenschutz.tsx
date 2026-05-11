@@ -1,27 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-export const Route = createFileRoute("/datenschutz")({
-  component: Page,
-  head: () => ({
-    meta: [
-      { title: "Datenschutzerklärung – Dipl.-Ing. Alexander Christ GmbH" },
-      {
-        name: "description",
-        content:
-          "Informationen zum Datenschutz bei der Dipl.-Ing. Alexander Christ GmbH in Berlin.",
-      },
-      { property: "og:title", content: "Datenschutzerklärung – Dipl.-Ing. Alexander Christ GmbH" },
-      {
-        property: "og:description",
-        content: "Informationen zum Datenschutz bei der Dipl.-Ing. Alexander Christ GmbH.",
-      },
-    ],
-  }),
-});
 
-function Page() {
+
+export default function Page() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

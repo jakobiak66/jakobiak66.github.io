@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 
 const leistungenItems = [
   { label: "Heizungsinstallation", to: "/leistungen/heizungstechnik" },

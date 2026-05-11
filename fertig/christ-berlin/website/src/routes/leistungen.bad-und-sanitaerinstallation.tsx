@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { LeistungLayout } from "@/components/site/LeistungLayout";
 import badHero from "@/assets/badsanierung-hero.png";
 import badRohinstallation from "@/assets/badsanierung-rohinstallation.png";
@@ -6,29 +5,9 @@ import badDusche from "@/assets/badsanierung-dusche.png";
 import badFliesen from "@/assets/badsanierung-fliesen.png";
 import badBadewanne from "@/assets/badsanierung-badewanne.png";
 
-export const Route = createFileRoute("/leistungen/bad-und-sanitaerinstallation")({
-  component: Page,
-  head: () => ({
-    meta: [
-      { title: "Bad- und Sanitärinstallation – Dipl.-Ing. Alexander Christ GmbH" },
-      {
-        name: "description",
-        content:
-          "Vom Wasserhahn bis zum Komplettbad: Planung und Installation hochwertiger Sanitärtechnik.",
-      },
-      {
-        property: "og:title",
-        content: "Bad- und Sanitärinstallation – Dipl.-Ing. Alexander Christ GmbH",
-      },
-      {
-        property: "og:description",
-        content: "Vom Wasserhahn bis zum Komplettbad – Sanitärtechnik aus einer Hand.",
-      },
-    ],
-  }),
-});
 
-function Page() {
+
+export default function Page() {
   return (
     <LeistungLayout
       title="Bad- und Sanitärinstallation"

@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { ServiceCards } from "@/components/site/ServiceCards";
@@ -10,21 +9,9 @@ import { Faq } from "@/components/site/Faq";
 import { CtaBanner } from "@/components/site/CtaBanner";
 import { Footer } from "@/components/site/Footer";
 
-export const Route = createFileRoute("/")({
-  component: Index,
-  head: () => ({
-    meta: [
-      { title: "Dipl.-Ing. Alexander Christ GmbH – Gebäudetechnik Berlin" },
-      {
-        name: "description",
-        content:
-          "Ihr Fachbetrieb für Heizung, Sanitär, Schornsteinbau und Solar in Berlin. Maßgeschneiderte Konzepte, 24h-Notdienst. Alexander Christ GmbH – Tegeler Straße 42-43, 13353 Berlin.",
-      },
-    ],
-  }),
-});
 
-function Index() {
+
+export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

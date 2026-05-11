@@ -1,20 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight, Instagram } from "lucide-react";
 
-export const Route = createFileRoute("/ueber-uns")({
-  head: () => ({
-    meta: [
-      { title: "Über uns – Goldschmiede Cifci Karlsruhe" },
-      { name: "description", content: "Familienbetrieb in Karlsruhe seit 1992. Serhat Cifci (Inhaber) und Esra Cifci – leidenschaftliche Goldschmiede mit höchstem Anspruch an Qualität und Handwerk." },
-    ],
-  }),
-  component: UeberUnsPage,
-});
 
-function UeberUnsPage() {
+
+export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

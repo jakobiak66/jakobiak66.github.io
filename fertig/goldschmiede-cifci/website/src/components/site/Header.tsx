@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 
 type NavItem = {
   label: string;

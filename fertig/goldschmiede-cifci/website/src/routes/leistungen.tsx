@@ -1,18 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Gem, Heart, Wrench, Sparkles, ArrowRight } from "lucide-react";
 
-export const Route = createFileRoute("/leistungen")({
-  head: () => ({
-    meta: [
-      { title: "Leistungen – Goldschmiede Cifci Karlsruhe" },
-      { name: "description", content: "Individuelle Schmuckstücke, Trauringe, Umarbeitungen und Reparaturen. Handgefertigte Goldschmiedekunst in Karlsruhe seit 1992." },
-    ],
-  }),
-  component: LeistungenPage,
-});
+
 
 const leistungen = [
   {
@@ -41,7 +32,7 @@ const leistungen = [
   },
 ];
 
-function LeistungenPage() {
+export default function LeistungenPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

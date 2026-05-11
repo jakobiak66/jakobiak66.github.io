@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
@@ -6,27 +5,9 @@ import { CtaBanner } from "@/components/site/CtaBanner";
 import teamPhoto from "@/assets/team-hlr.png";
 import heroBg from "@/assets/hero-heizung-sanitaer.png";
 
-export const Route = createFileRoute("/ueber-uns")({
-  component: UeberUnsPage,
-  head: () => ({
-    meta: [
-      { title: "Über uns – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        name: "description",
-        content:
-          "Die SWA Berlin GmbH – Ihr TGA-Fachbetrieb für Heizung, Sanitär, Lüftung und Kälte-Klima in Berlin und Brandenburg. Gegründet April 2020.",
-      },
-      { property: "og:title", content: "Über uns – SWA Berlin GmbH" },
-      {
-        property: "og:description",
-        content:
-          "Professionelle TGA-Dienstleistungen in Berlin und Brandenburg. Traditionelles Handwerk kombiniert mit modernsten Technologien.",
-      },
-    ],
-  }),
-});
 
-function UeberUnsPage() {
+
+export default function UeberUnsPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />

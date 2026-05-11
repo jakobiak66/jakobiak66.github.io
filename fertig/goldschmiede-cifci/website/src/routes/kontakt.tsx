@@ -1,19 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 
-export const Route = createFileRoute("/kontakt")({
-  head: () => ({
-    meta: [
-      { title: "Kontakt – Goldschmiede Cifci Karlsruhe" },
-      { name: "description", content: "Kontaktieren Sie die Goldschmiede Cifci: Waldstraße 25, 76133 Karlsruhe. Tel: 0721 / 2032810. E-Mail: kontakt@goldschmiede-cifci.de" },
-    ],
-  }),
-  component: KontaktPage,
-});
 
-function KontaktPage() {
+
+export default function KontaktPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

@@ -1,18 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-export const Route = createFileRoute("/impressum")({
-  head: () => ({
-    meta: [
-      { title: "Impressum – Goldschmiede Cifci" },
-      { name: "description", content: "Impressum der Goldschmiede Cifci, Inhaber Serhat Cifci, Waldstraße 25, 76133 Karlsruhe." },
-    ],
-  }),
-  component: ImpressumPage,
-});
 
-function ImpressumPage() {
+
+export default function ImpressumPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />

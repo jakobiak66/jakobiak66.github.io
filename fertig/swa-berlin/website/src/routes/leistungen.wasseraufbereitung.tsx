@@ -1,31 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { LeistungLayout } from "@/components/site/LeistungLayout";
 import wasserHero from "@/assets/wasseraufbereitung-hero.png";
 import wasser2 from "@/assets/wasseraufbereitung-2.png";
 import wasser3 from "@/assets/wasseraufbereitung-3.png";
 import wasser4 from "@/assets/wasseraufbereitung-4.png";
 
-export const Route = createFileRoute("/leistungen/wasseraufbereitung")({
-  component: Page,
-  head: () => ({
-    meta: [
-      { title: "Wasseraufbereitung – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        name: "description",
-        content:
-          "Service und Wartung für TGA-Anlagen – Druckhaltestationen und Entgasungsanlagen vom Fachbetrieb in Berlin.",
-      },
-      { property: "og:title", content: "Wasseraufbereitung – SWA Service Wartung Anlagenbau Berlin GmbH" },
-      {
-        property: "og:description",
-        content:
-          "Reines Wasser für Ihr Zuhause – passende Lösungen für sauberes, weiches Wasser.",
-      },
-    ],
-  }),
-});
 
-function Page() {
+
+export default function Page() {
   return (
     <LeistungLayout
       title="Wasseraufbereitung"
