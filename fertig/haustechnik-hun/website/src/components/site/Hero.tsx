@@ -1,7 +1,7 @@
 import { CheckCircle2, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroPlumber from "@/assets/hero-plumber.jpg";
-import heroWorker from "@/assets/hero-worker.jpg";
+import heroPlumber from "@/assets/hero.jpg";
+import heroWorker from "@/assets/fahrzeug.jpg";
 
 export const Hero = () => {
   return (

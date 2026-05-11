@@ -11,16 +11,18 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const leistungen = [
-  { label: "Kostenlose Beratung", to: "/leistungen/kostenlose-beratung" },
-  { label: "Installation Sanitär", to: "/leistungen/installation-sanitaer" },
-  { label: "Installation Heizgerät", to: "/leistungen/installation-heizgeraet" },
-  { label: "Wärmepumpe", to: "/leistungen/waermepumpe" },
+  { label: "Sanitärbereich & Badplanung", to: "/leistungen/installation-sanitaer" },
+  { label: "Heizungsinstallation", to: "/leistungen/installation-heizgeraet" },
+  { label: "Gasinstallationen", to: "/leistungen/gasinstallationen" },
+  { label: "Notdienst 24h", to: "/notdienst" },
 ];
 
 const nav = [
   { label: "Über uns", to: "/ueber-uns" },
+  { label: "Service", to: "/service" },
+  { label: "Aktuelles", to: "/aktuelles" },
   { label: "Kontakt", to: "/kontakt" },
-  { label: "Karriere", to: "/karriere" },
+  { label: "Anfahrt", to: "/anfahrt" },
 ];
 
 export const Header = () => {
@@ -34,6 +36,9 @@ export const Header = () => {
           <a href="tel:+4975519450480" className="hidden md:inline-flex items-center gap-1 hover:text-primary-glow transition-smooth">
             <Phone className="h-3 w-3" /> +49 7551 / 945048
           </a>
+          <a href="tel:+4901718297911" className="hidden md:inline-flex items-center gap-1 hover:text-primary-glow transition-smooth">
+            <Phone className="h-3 w-3" /> 0171 – 82 97 911
+          </a>
         </div>
       </div>
 
@@ -45,7 +50,7 @@ export const Header = () => {
             <span className="text-primary text-3xl leading-none">.</span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             <Link to="/ueber-uns" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">
               Über uns
             </Link>
@@ -74,17 +79,17 @@ export const Header = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link to="/kontakt" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">
-              Kontakt
-            </Link>
-            <Link to="/karriere" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">
-              Karriere
-            </Link>
+            <Link to="/service" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">Service</Link>
+            <Link to="/aktuelles" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">Aktuelles</Link>
+            <Link to="/kontakt" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">Kontakt</Link>
+            <Link to="/anfahrt" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">Anfahrt</Link>
           </nav>
 
           <div className="flex items-center gap-3">
             <Button variant="hero" size="sm" className="hidden sm:inline-flex" asChild>
-              <Link to="/kontakt">Jetzt Termin buchen</Link>
+              <a href="tel:+4975519450480">
+                <Phone className="h-4 w-4" /> Jetzt anrufen
+              </a>
             </Button>
             <button
               onClick={() => setOpen(!open)}
@@ -95,12 +100,12 @@ export const Header = () => {
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
         {open && (
           <div className="md:hidden border-t border-border bg-background">
             <div className="container flex flex-col py-3">
-              <Link to="/ueber-uns" onClick={() => setOpen(false)} className="py-2 text-sm font-medium">
-                Über uns
-              </Link>
+              <Link to="/ueber-uns" onClick={() => setOpen(false)} className="py-2 text-sm font-medium">Über uns</Link>
               <details className="py-2">
                 <summary className="text-sm font-medium cursor-pointer flex items-center justify-between">
                   Leistungen <ChevronDown className="h-4 w-4" />
@@ -118,6 +123,9 @@ export const Header = () => {
                   {n.label}
                 </Link>
               ))}
+              <Link to="/impressum" onClick={() => setOpen(false)} className="py-2 text-sm text-muted-foreground">
+                Impressum
+              </Link>
             </div>
           </div>
         )}

@@ -5,9 +5,9 @@ import { Booking } from "@/components/site/Booking";
 import { FAQ } from "@/components/site/FAQ";
 import { Button } from "@/components/ui/button";
 import { CalendarCheck, CheckCircle2, ArrowRight, Star, Wrench, ShowerHead, Flame, Settings, Droplets, Bath, Hammer, Thermometer } from "lucide-react";
-import sanitaerHero from "@/assets/sanitaer-hero.jpg";
-import digitalTablet from "@/assets/digital-tablet.jpg";
-import teamMeeting from "@/assets/team-meeting.jpg";
+import sanitaerHero from "@/assets/galerie-1.jpg";
+import digitalTablet from "@/assets/galerie-2.jpg";
+import teamMeeting from "@/assets/team-laszlo.jpg";
 
 const advantages = [
   "Schneller Service",

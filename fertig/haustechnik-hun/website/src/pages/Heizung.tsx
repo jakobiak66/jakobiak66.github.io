@@ -4,9 +4,9 @@ import { ProjectSteps } from "@/components/site/ProjectSteps";
 import { Booking } from "@/components/site/Booking";
 import { Button } from "@/components/ui/button";
 import { CalendarCheck, CheckCircle2, Star, Wrench, ShowerHead, Flame, Settings, Droplets, Hammer, Thermometer } from "lucide-react";
-import heizungHero from "@/assets/heizung-hero.jpg";
-import digitalTablet from "@/assets/digital-tablet.jpg";
-import teamMeeting from "@/assets/team-meeting.jpg";
+import heizungHero from "@/assets/pelletsheizung.jpg";
+import digitalTablet from "@/assets/leistungen.jpg";
+import teamMeeting from "@/assets/betrieb.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const advantages = [
