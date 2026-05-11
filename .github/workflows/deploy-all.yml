@@ -103,6 +103,7 @@ jobs:
       - name: Assemble dist/
         run: |
           mkdir -p dist
+          touch dist/.nojekyll
           cp fertig/alle_websites_deploy/index.html dist/index.html
 
           # Alle 13 Projekte einfügen
