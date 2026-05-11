@@ -22,75 +22,22 @@ jobs:
     name: "Build: ${{ matrix.project }}"
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false   # Alle anderen bauen weiter, auch wenn einer scheitert
+      fail-fast: false
       matrix:
         include:
-          # ── Typ A: Standard Vite + React (react-router-dom) ──
-          - project: haustechnik-hun
-            path: fertig/haustechnik-hun/website
-            firma: "Haustechnik Hun"
-            branche: "SHK"
-
-          - project: heizung-sanitaer-adamek
-            path: fertig/heizung-sanitaer-adamek/website
-            firma: "Heizung Sanitär Adamek"
-            branche: "SHK+Solar"
-
-          - project: shk-rathmann
-            path: fertig/shk-rathmann/website
-            firma: "SHK Rathmann"
-            branche: "SHK"
-
-          - project: susanneheitmann
-            path: fertig/susanneheitmann/website
-            firma: "Susanne Heitmann"
-            branche: "Coaching"
-
-          - project: fahrschulekolb
-            path: fertig/fahrschulekolb/website
-            firma: "Fahrschule Kolb"
-            branche: "Fahrschule"
-
-          - project: yoga-kendra
-            path: fertig/yoga-kendra/website
-            firma: "Yoga Kendra"
-            branche: "Yoga"
-
-          - project: sehrfit
-            path: fertig/sehrfit/website
-            firma: "SEHRFIT"
-            branche: "Fitness"
-
-          - project: fahrschule-salman
-            path: fertig/fahrschule-salman/website
-            firma: "Fahrschule Salman"
-            branche: "Fahrschule"
-
-          - project: fat-daddys-tattoo
-            path: fertig/fat-daddys-tattoo/website
-            firma: "Fat Daddys Backyard"
-            branche: "Tattoo"
-
-          - project: fahrschule-frank-dopf
-            path: fertig/fahrschule-frank-dopf/website
-            firma: "Fahrschule Frank Dopf"
-            branche: "Fahrschule"
-
-          # ── Typ B: TanStack Router/Start ──
-          - project: christ-berlin
-            path: fertig/christ-berlin/website
-            firma: "Alexander Christ GmbH"
-            branche: "Gebäudetechnik"
-
-          - project: swa-berlin
-            path: fertig/swa-berlin/website
-            firma: "SWA Berlin GmbH"
-            branche: "TGA"
-
-          - project: goldschmiede-cifci
-            path: fertig/goldschmiede-cifci/website
-            firma: "Goldschmiede Cifci"
-            branche: "Goldschmiede"
+          - { project: haustechnik-hun,         path: fertig/haustechnik-hun/website }
+          - { project: heizung-sanitaer-adamek, path: fertig/heizung-sanitaer-adamek/website }
+          - { project: shk-rathmann,            path: fertig/shk-rathmann/website }
+          - { project: susanneheitmann,         path: fertig/susanneheitmann/website }
+          - { project: fahrschulekolb,          path: fertig/fahrschulekolb/website }
+          - { project: yoga-kendra,             path: fertig/yoga-kendra/website }
+          - { project: sehrfit,                 path: fertig/sehrfit/website }
+          - { project: fahrschule-salman,       path: fertig/fahrschule-salman/website }
+          - { project: fat-daddys-tattoo,       path: fertig/fat-daddys-tattoo/website }
+          - { project: fahrschule-frank-dopf,   path: fertig/fahrschule-frank-dopf/website }
+          - { project: christ-berlin,           path: fertig/christ-berlin/website }
+          - { project: swa-berlin,              path: fertig/swa-berlin/website }
+          - { project: goldschmiede-cifci,      path: fertig/goldschmiede-cifci/website }
 
     steps:
       - name: Checkout Repository
@@ -105,17 +52,50 @@ jobs:
         run: npm install
         working-directory: ${{ matrix.path }}
 
+      # FIX 1: Base-Pfad in vite.config.ts setzen (nicht via CLI-Flag)
+      # Der Lovable-Config-Wrapper liest base NUR über defineConfig({ vite: { base } })
+      - name: Set base path in vite.config.ts
+        run: |
+          cat > vite.config.ts << EOF
+          import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+          export default defineConfig({ vite: { base: "/${{ matrix.project }}/" } });
+          EOF
+        working-directory: ${{ matrix.path }}
+
       - name: Build Website
-        run: npm run build -- --base=/${{ matrix.project }}/
+        run: npm run build
         working-directory: ${{ matrix.path }}
         env:
           NODE_ENV: production
+
+      # FIX 2: TanStack Start baut nach dist/client/ statt dist/
+      # Normalize: alles immer nach dist/index.html
+      - name: Normalize build output
+        run: |
+          # TanStack SSR/Cloudflare baut nach dist/client/index.html
+          if [ -f "dist/client/index.html" ]; then
+            echo "TanStack SSR erkannt → dist/client/ → dist/ verschieben"
+            mv dist/client dist_static_tmp
+            rm -rf dist
+            mv dist_static_tmp dist
+          fi
+
+          # Ergebnis prüfen
+          if [ -f "dist/index.html" ]; then
+            echo "✅ dist/index.html vorhanden ($(find dist -type f | wc -l) Dateien)"
+          else
+            echo "❌ Kein dist/index.html gefunden"
+            ls -la dist/ 2>/dev/null || echo "dist/ existiert nicht"
+            exit 1
+          fi
+        working-directory: ${{ matrix.path }}
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: dist-${{ matrix.project }}
           path: ${{ matrix.path }}/dist
+          if-no-files-found: error
           retention-days: 1
 
   # ─────────────────────────────────────────────
@@ -124,6 +104,8 @@ jobs:
   assemble-and-deploy:
     name: "Assemble & Deploy to GitHub Pages"
     needs: build
+    # FIX 3: Immer ausführen, auch wenn einzelne Build-Jobs scheitern
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -144,11 +126,8 @@ jobs:
       - name: Assemble Final Output
         run: |
           mkdir -p dist
-
-          # Landing-Page kopieren
           cp fertig/alle_websites_deploy/index.html dist/index.html
 
-          # Jede Website in ihr Unterverzeichnis kopieren
           PROJECTS=(
             haustechnik-hun
             heizung-sanitaer-adamek
@@ -165,20 +144,23 @@ jobs:
             goldschmiede-cifci
           )
 
+          ok=0; skip=0
           for proj in "${PROJECTS[@]}"; do
             artifact_dir="artifacts/dist-${proj}"
-            if [ -d "$artifact_dir" ]; then
+            if [ -d "$artifact_dir" ] && [ -f "${artifact_dir}/index.html" ]; then
               mkdir -p "dist/${proj}"
               cp -r "${artifact_dir}/." "dist/${proj}/"
               echo "✅ Assembled: ${proj}"
+              ok=$((ok+1))
             else
-              echo "⚠️  WARNING: No artifact found for ${proj}"
+              echo "⚠️  Skipped: ${proj}"
+              skip=$((skip+1))
             fi
           done
 
           echo ""
-          echo "📁 Final dist/ structure:"
-          ls -la dist/
+          echo "Ergebnis: ${ok} assembliert, ${skip} übersprungen"
+          echo "Dateien in dist/: $(find dist -type f | wc -l)"
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
