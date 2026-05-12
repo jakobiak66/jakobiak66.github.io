@@ -1,6 +1,5 @@
 import { Phone, Check, Clock, Shield, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-plumber.jpg";
 
 export const Hero = () => {
   return (
@@ -51,8 +50,8 @@ export const Hero = () => {
         <div className="relative">
           <div className="absolute -inset-4 bg-gradient-hero rounded-3xl opacity-20 blur-2xl" />
           <img
-            src={heroImg}
-            alt="Sanitär Lindner - Meister vor Service-Fahrzeug"
+            src="/susanneheitmann/images/01-future-I-2021.jpg"
+            alt="Susanne Heitmann – Future I, 2021, Malerei auf Papier"
             width={1024}
             height={768}
             className="relative rounded-2xl shadow-cta object-cover w-full h-auto"

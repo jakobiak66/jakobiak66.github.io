@@ -1,6 +1,6 @@
-import { Phone, Check, Clock, Shield, MapPin } from "lucide-react";
+﻿import { Phone, Check, Clock, Shield, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-plumber.jpg";
+
 
 export const Hero = () => {
   return (
@@ -8,14 +8,14 @@ export const Hero = () => {
       <div className="container py-10 md:py-16 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-semibold mb-5">
-            <MapPin className="h-3.5 w-3.5" /> Ihr lokaler Sanitär-Notdienst
+            <MapPin className="h-3.5 w-3.5" /> Ihr lokaler SanitÃ¤r-Notdienst
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground">
-            Sanitär in <span className="text-primary">Ihrer Nähe</span>:<br />
+            SanitÃ¤r in <span className="text-primary">Ihrer NÃ¤he</span>:<br />
             Sofort-Hilfe vom Profi
           </h1>
           <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent/20 text-foreground px-3 py-1.5 text-sm font-medium">
-            <Clock className="h-4 w-4 text-accent" /> Heute noch verfügbar – 24/7 Notdienst
+            <Clock className="h-4 w-4 text-accent" /> Heute noch verfÃ¼gbar â€“ 24/7 Notdienst
           </div>
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-xl">
             Rohrbruch, verstopfter Abfluss oder defekte Heizung? Wir kommen schnell, arbeiten sauber und zum Festpreis.
@@ -23,8 +23,8 @@ export const Hero = () => {
           <ul className="mt-6 space-y-2.5">
             {[
               "30 Minuten Anfahrt im Umkreis",
-              "Transparente Festpreise – keine versteckten Kosten",
-              "Meisterbetrieb mit über 15 Jahren Erfahrung",
+              "Transparente Festpreise â€“ keine versteckten Kosten",
+              "Meisterbetrieb mit Ã¼ber 15 Jahren Erfahrung",
               "Garantie auf alle Leistungen",
             ].map((t) => (
               <li key={t} className="flex items-start gap-2 text-foreground">
@@ -40,22 +40,22 @@ export const Hero = () => {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <a href="#kontakt">Rückruf anfordern</a>
+              <a href="#kontakt">RÃ¼ckruf anfordern</a>
             </Button>
           </div>
           <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
             <span className="flex items-center gap-1"><Shield className="h-4 w-4 text-primary" /> Meisterbetrieb</span>
-            <span>•</span>
-            <span>TÜV-zertifiziert</span>
-            <span>•</span>
-            <span>Bezahlung: Bar / EC / Überweisung</span>
+            <span>â€¢</span>
+            <span>TÃœV-zertifiziert</span>
+            <span>â€¢</span>
+            <span>Bezahlung: Bar / EC / Ãœberweisung</span>
           </div>
         </div>
         <div className="relative">
           <div className="absolute -inset-4 bg-gradient-hero rounded-3xl opacity-20 blur-2xl" />
           <img
-            src={heroImg}
-            alt="Sanitär Lindner - Meister vor Service-Fahrzeug"
+            src="/fahrschulekolb/images/hero.jpg"
+            alt="SanitÃ¤r Lindner - Meister vor Service-Fahrzeug"
             width={1024}
             height={768}
             className="relative rounded-2xl shadow-cta object-cover w-full h-auto"

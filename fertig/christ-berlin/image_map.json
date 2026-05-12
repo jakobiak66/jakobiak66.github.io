@@ -1,40 +1,20 @@
-{
+﻿{
   "logo": {
-    "gefunden": false,
-    "pfad": "images/original/logo.png",
-    "quell_url": null,
-    "notiz": "Logo nicht direkt gefunden. Versuche mit /logo.png, /wp-content/uploads/logo.png fehlgeschlagen."
+    "datei": null,
+    "kontext": "Header Logo – kein Logo auf Website gefunden",
+    "platzhalter": "Buchstabe 'C' als Monogramm-Logo"
   },
-  "hero": "images/original/hero.jpg",
-  "hero_quell_url": null,
-  "team": [],
+  "hero": {
+    "datei": null,
+    "kontext": "Startseite Hero Banner – Original-Website hat kein dediziertes Hero-Bild",
+    "platzhalter": "Platzhalter-Banner mit Firmeninformationen"
+  },
   "leistungen": [
-    {
-      "beschreibung": "Heizung",
-      "pfad": "images/original/heizung.png",
-      "quell_url": "https://christ-berlin.de/wp-content/uploads/2021/04/Heizung.png"
-    },
-    {
-      "beschreibung": "Sanitär",
-      "pfad": "images/original/sanitaer.png",
-      "quell_url": "https://christ-berlin.de/wp-content/uploads/2021/04/Sanitaer.png"
-    },
-    {
-      "beschreibung": "Schornsteinbau",
-      "pfad": "images/original/schornsteinbau.png",
-      "quell_url": "https://christ-berlin.de/wp-content/uploads/2021/04/Schornsteinbau.png"
-    },
-    {
-      "beschreibung": "Energieberatung",
-      "pfad": "images/original/energieberatung.png",
-      "quell_url": "https://christ-berlin.de/wp-content/uploads/2021/04/Energieberatung.png"
-    },
-    {
-      "beschreibung": "Solar-/Photovoltaikanlagen",
-      "pfad": "images/original/solar.png",
-      "quell_url": "https://christ-berlin.de/wp-content/uploads/2021/04/Solaranlagen.png"
-    }
+    {"datei": "original/heizung.png", "public_pfad": "/christ-berlin/images/heizung.png", "kontext": "Service-Icon Heizungsinstallation", "original_seite": "https://christ-berlin.de/", "original_sektion": "Services"},
+    {"datei": "original/sanitaer.png", "public_pfad": "/christ-berlin/images/sanitaer.png", "kontext": "Service-Icon Sanitaerinstallation", "original_seite": "https://christ-berlin.de/", "original_sektion": "Services"},
+    {"datei": "original/schornsteinbau.png", "public_pfad": "/christ-berlin/images/schornsteinbau.png", "kontext": "Service-Icon Schornsteinbau", "original_seite": "https://christ-berlin.de/", "original_sektion": "Services"},
+    {"datei": "original/energieberatung.png", "public_pfad": "/christ-berlin/images/energieberatung.png", "kontext": "Service-Icon Energieberatung", "original_seite": "https://christ-berlin.de/", "original_sektion": "Services"},
+    {"datei": "original/solaranlagen.png", "public_pfad": "/christ-berlin/images/solaranlagen.png", "kontext": "Service-Icon Solar/Photovoltaik", "original_seite": "https://christ-berlin.de/", "original_sektion": "Services"}
   ],
-  "galerie": [],
-  "sonstige": []
+  "platzhalter_benoetigt": ["Hero-Banner (Startseite) – Firmenfoto erwuenscht", "Team-Foto (Ueber-uns-Seite)", "Leistungs-Detailbilder fuer alle Seiten"]
 }

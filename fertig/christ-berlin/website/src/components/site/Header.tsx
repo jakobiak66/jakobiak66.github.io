@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 const leistungenItems = [
   { label: "Heizungsinstallation", to: "/leistungen/heizungstechnik" },
   { label: "Sanitärinstallation", to: "/leistungen/bad-und-sanitaerinstallation" },
-  { label: "Schornsteinbau", to: "/leistungen/wohnraumlueftung" },
   { label: "Solar- & Photovoltaik", to: "/leistungen/solartechnik" },
-  { label: "Energieberatung", to: "/leistungen/wasseraufbereitung" },
+  { label: "Schornsteinbau", to: "/leistungen/schornsteinbau" },
+  { label: "Kamine", to: "/leistungen/kamine" },
+  { label: "Energieberatung", to: "/leistungen/energieberatung" },
+  { label: "Regenwassernutzung", to: "/leistungen/regenwassernutzung" },
   { label: "24h-Notdienst", to: "/kontakt" },
 ];
 

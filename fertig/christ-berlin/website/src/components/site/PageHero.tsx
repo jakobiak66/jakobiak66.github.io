@@ -14,7 +14,7 @@ export function PageHero({
   title,
   subtitle,
   actions,
-  backgroundImage = "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=1920&q=80",
+  backgroundImage = "",
   backgroundAlt = "",
   variant = "image",
   overlayOpacity = 45,
@@ -24,14 +24,20 @@ export function PageHero({
     <section className="relative h-[280px] md:h-[340px] overflow-hidden bg-ink">
       {variant === "image" ? (
         <>
-          <img
-            src={backgroundImage}
-            alt={backgroundAlt}
-            className="absolute inset-0 w-full h-full object-cover object-center"
-          />
+          {backgroundImage ? (
+            <img
+              src={backgroundImage}
+              alt={backgroundAlt}
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+          ) : (
+            <div className="absolute inset-0 bg-[#f0f0f0] border-b-2 border-dashed border-[#ccc] flex items-center justify-center">
+              <p className="text-[#999] text-sm">📷 Platzhalter – Hintergrundbild</p>
+            </div>
+          )}
           <div
             className="absolute inset-0 bg-ink"
-            style={{ opacity: overlayOpacity / 100 }}
+            style={{ opacity: backgroundImage ? overlayOpacity / 100 : 0.1 }}
           />
         </>
       ) : (

@@ -1,18 +1,18 @@
-import { Check, Phone } from "lucide-react";
+﻿import { Check, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import about from "@/assets/about-plumber.jpg";
+
 
 export const About = () => (
   <section className="py-16 border-b border-border bg-background">
     <div className="container grid md:grid-cols-2 gap-10 items-center">
-      <img src={about} alt="Bernd Lindner – Ihr Ansprechpartner" loading="lazy" width={1024} height={768} className="rounded-2xl shadow-card object-cover w-full" />
+      <img src="/fahrschule-frank-dopf/images/intro1.png" alt="Bernd Lindner â€“ Ihr Ansprechpartner" loading="lazy" width={1024} height={768} className="rounded-2xl shadow-card object-cover w-full" />
       <div>
         <h2 className="text-3xl md:text-4xl font-bold text-foreground">Ihr Ansprechpartner: Bernd Lindner</h2>
-        <p className="mt-2 text-muted-foreground">Persönlich. Verlässlich. Mit Handschlag-Qualität.</p>
+        <p className="mt-2 text-muted-foreground">PersÃ¶nlich. VerlÃ¤sslich. Mit Handschlag-QualitÃ¤t.</p>
         <div className="mt-6 grid grid-cols-3 gap-4">
           {[
             { v: "15+", l: "Jahre Erfahrung" },
-            { v: "8000+", l: "Aufträge erledigt" },
+            { v: "8000+", l: "AuftrÃ¤ge erledigt" },
             { v: "99%", l: "Kundenzufriedenheit" },
           ].map((s) => (
             <div key={s.l} className="rounded-xl bg-surface border border-border p-4 text-center">
@@ -22,7 +22,7 @@ export const About = () => (
           ))}
         </div>
         <div className="mt-6 rounded-xl bg-primary/5 border-l-4 border-primary p-4 text-sm text-foreground">
-          „Mein Anspruch ist es, jedem Kunden so zu helfen, wie ich auch selbst behandelt werden möchte: schnell, fair und ehrlich. Deshalb gibt es bei mir Festpreise – ohne böse Überraschungen."
+          â€žMein Anspruch ist es, jedem Kunden so zu helfen, wie ich auch selbst behandelt werden mÃ¶chte: schnell, fair und ehrlich. Deshalb gibt es bei mir Festpreise â€“ ohne bÃ¶se Ãœberraschungen."
         </div>
         <ul className="mt-5 grid sm:grid-cols-2 gap-2 text-sm">
           {["Meisterbetrieb", "Versicherungs-Partner", "Festpreis-Garantie", "Saubere Arbeit"].map((t) => (

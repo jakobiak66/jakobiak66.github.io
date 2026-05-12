@@ -14,7 +14,8 @@ type NavItem = { label: string; href?: string; to?: string };
 
 const otherNavItems: NavItem[] = [
   { label: "Über uns", to: "/ueber-uns" },
-  { label: "Referenzen", to: "/ueber-uns" },
+  { label: "Referenzen", to: "/referenzen" },
+  { label: "Jobs", to: "/jobs" },
   { label: "Kontakt", to: "/kontakt" },
 ];
 
@@ -82,13 +83,11 @@ export function Header() {
           )}
         </nav>
         <Link to="/" className="mr-auto md:mr-0 md:ml-0 flex items-center select-none order-first md:order-none gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand text-white font-extrabold text-lg">
-            S
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span className="font-extrabold text-base text-ink tracking-tight">SWA Berlin</span>
-            <span className="text-xs text-muted-foreground">TGA-Haustechnik GmbH</span>
-          </div>
+          <img
+            src="/swa-berlin/images/logo.png"
+            alt="SWA Berlin GmbH Logo"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
         <button
           aria-label="Menü"

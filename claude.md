@@ -1,11 +1,12 @@
-# Website Rebuild Automation V3
+# Website Rebuild Automation V3 – Final
 
 ## Ziel
-Alte Kundenwebseiten automatisch auslesen, analysieren und 
-in moderne Templates übertragen. Templates werden intelligent
-erweitert wenn die alte Website Seiten hat die im Template fehlen.
-Nach jedem Durchlauf wird der Prozess selbst analysiert und 
-optimiert.
+Alte Kundenwebseiten automatisch auslesen und in moderne
+Templates übertragen. Dabei:
+- NUR echte Bilder von der Original-Website verwenden
+- Seitenstruktur der alten Website exakt spiegeln
+- Templates intelligent erweitern oder kürzen
+- KI-generierte Bilder sind VERBOTEN
 
 ## Umgebungsvariablen
 - FIRECRAWL_API_KEY – in Systemumgebungsvariablen
@@ -14,13 +15,13 @@ optimiert.
 ## Projektstruktur
 template_projekt_v3/
 ├── CLAUDE.md
-├── PROZESS_OPTIMIERUNG.md    ← wird automatisch aktualisiert
+├── PROZESS_OPTIMIERUNG.md
+├── .gitignore                ← MUSS existieren vor git add
 ├── Templates/
-│   └── [7 template-ordner]/
+│   └── [template-ordner]/
 │       └── meta.json
 └── fertig/
-    └── [domain-name]/        ← automatisch aus URL
-        ├── raw_crawl.json
+    └── [domain-name]/
         ├── normalized_data.json
         ├── farben.json
         ├── image_map.json
@@ -35,31 +36,26 @@ template_projekt_v3/
             └── public/
                 └── images/
 
-## Projektname automatisch generieren
-Leite den Projektordner-Namen aus der URL ab:
-- https://www.elektro-schirmer.com/ → elektro-schirmer
-- https://christ-berlin.de/ → christ-berlin
-- Kleinbuchstaben, Bindestriche statt Leerzeichen
-- www. und http(s):// entfernen
+## SCHRITT 0a – .gitignore zuerst erstellen
+BEVOR irgendeine andere Datei erstellt wird:
 
-## Bei mehreren Websites
-Verarbeite jede Website nacheinander komplett (Schritte 0-11).
-Erstelle am Ende eine /fertig/GESAMT_REPORT.md mit:
-- Übersicht aller verarbeiteten Websites
-- Gesamt-Kosten
-- Qualitäts-Scores im Vergleich
-- Welches Template wie oft gewählt wurde
+fertig/*/raw_crawl.json
+fertig/*/node_modules/
+fertig/*/dist/
+fertig/*/website/node_modules/
+fertig/*/website/dist/
+**/.env
+*.local
+.DS_Store
 
-## Dein Ablauf bei jeder neuen Kundenwebsite
-
-### Schritt 0 – Templates analysieren
-Gehe durch jeden Ordner in /Templates/:
-- Lies die Hauptdatei (index.html, App.tsx, main.tsx o.ä.)
-- Erkenne Seitenstruktur, Branche, Stil, Komponenten
-- Erkenne wo Bilder und Farben definiert sind
-- Erkenne den visuellen Stil (minimalistisch, modern, 
-  futuristisch, klassisch, verspielt etc.)
-- Erstelle /Templates/[name]/meta.json:
+## SCHRITT 0b – Templates analysieren
+Für jeden Template-Ordner:
+- Lies Hauptdatei (App.tsx, main.tsx, index.html)
+- Erkenne: Stil, Branche, Seiten, Komponenten
+- Prüfe ob TanStack Router verwendet wird
+  Falls ja: konvertiere zu react-router-dom
+  (TanStack SSR funktioniert nicht auf GitHub Pages)
+- Erstelle meta.json:
 {
   "name": "",
   "beschreibung": "",
@@ -68,135 +64,112 @@ Gehe durch jeden Ordner in /Templates/:
   "seiten": [],
   "hauptdatei": "",
   "css_variablen_datei": "",
-  "komponenten_ordner": "",
+  "router": "react-router-dom|tanstack",
   "platzhalter": [],
   "bild_platzhalter": [],
-  "farb_variablen": [],
-  "erweiterbar": true
+  "farb_variablen": []
 }
 
-### Schritt 1 – Website scrapen mit Firecrawl
-Nutze die Firecrawl API:
+## SCHRITT 1 – Website scrapen
+Firecrawl API:
 - Endpoint: https://api.firecrawl.dev/v1/crawl
 - Max 20 Unterseiten
 - Formate: markdown + html
-- Speichere Rohdaten → /fertig/[projektname]/raw_crawl.json
+- Speichere NICHT als raw_crawl.json ins Git!
+  Speichere temporär, extrahiere Daten, dann löschen.
 
-Messe:
-- Anzahl gecrawlter Seiten
-- Kosten (Firecrawl: $0.001 pro Seite)
-- Dauer in Sekunden
+## SCHRITT 2 – Seiten-Analyse (KRITISCH)
+Analysiere GENAU welche Seiten die alte Website hat:
 
-### Schritt 2 – Seiten-Analyse
-Analysiere welche Seiten/Sektionen die alte Website hat:
-
-Erkenne:
-- Alle vorhandenen Seiten (Home, Über uns, Leistungen etc.)
-- Einzigartige Sektionen die nur diese Website hat
-- Struktur und Hierarchie der Navigation
-- Welche Inhaltstypen pro Seite (Text, Bilder, Formulare etc.)
-
-Vergleiche mit dem später gewählten Template:
-- Welche Seiten sind im Template vorhanden? ✅
-- Welche Seiten fehlen im Template aber sind auf der alten Site? ❌
-- Welche Template-Seiten gibt es nicht auf der alten Site? ➕
-
-Speichere → /fertig/[projektname]/seiten_analyse.json:
+Erstelle seiten_analyse.json:
 {
-  "alte_website_seiten": [],
+  "alte_website_seiten": [
+    {
+      "url": "/anfahrt",
+      "titel": "Anfahrt",
+      "inhalt_typ": "Karte + Adresse",
+      "bilder": ["karte.jpg"],
+      "navigation_position": 5
+    }
+  ],
   "template_seiten": [],
-  "seiten_vorhanden": [],
-  "seiten_fehlend_im_template": [],
-  "seiten_nur_im_template": [],
-  "neue_seiten_erstellen": []
+  "hinzufuegen": [],
+  "entfernen": [],
+  "behalten": []
 }
 
-### Schritt 3 – Farben extrahieren
-Analysiere das gecrawlte HTML/CSS:
+Regel: 
+- Seite auf alter Website aber nicht im Template → HINZUFÜGEN
+- Seite im Template aber nicht auf alter Website → ENTFERNEN
+- Beide haben die Seite → BEHALTEN und befüllen
 
-Suche nach:
-- CSS Variablen (--primary-color, --accent, etc.)
-- Häufig verwendete HEX/RGB Werte
-- Hintergrundfarben, Textfarben, Button-Farben
-- Inline styles
-- Tailwind Klassen (bg-blue-600 etc.)
+## SCHRITT 3 – Farben extrahieren
+Suche nach CSS Variablen, HEX/RGB Werten, Tailwind Klassen.
 
-Fallback falls keine Farben gefunden:
-- Nutze neutrale professionelle Farben passend zur Branche
-- Dokumentiere dass Farben nicht extrahiert werden konnten
+Fallback falls keine Farben:
+- Branchenpassende neutrale Farben generieren
+- In report.md dokumentieren
 
-Erstelle /fertig/[projektname]/farben.json:
+Erstelle farben.json:
 {
   "primaer": "#hexwert",
   "sekundaer": "#hexwert",
   "akzent": "#hexwert",
   "hintergrund": "#hexwert",
   "text": "#hexwert",
-  "text_hell": "#hexwert",
   "button": "#hexwert",
-  "button_hover": "#hexwert",
-  "quelle": "extrahiert|generiert|fallback",
-  "alle_gefundenen": []
+  "quelle": "extrahiert|generiert"
 }
 
-### Schritt 4 – Logo extrahieren
-Suche das Logo auf mehreren Wegen:
+## SCHRITT 4 – Logo extrahieren
+Suche in dieser Reihenfolge:
+1. <img> mit "logo" in src/alt/class
+2. <a href="/"> mit Bild darin
+3. CSS background-image in Header/Nav
+4. Direkte URLs: /logo.png, /logo.svg, /logo.jpg,
+   /images/logo.png, /img/logo.png, /assets/logo.png,
+   /wp-content/uploads/, /favicon.ico als letzter Fallback
 
-Weg 1 – HTML Tags:
-- <img> mit "logo" im src, alt oder class
-- <svg> mit "logo" in id oder class
-- <a href="/"> mit Bild darin
+→ /fertig/[projekt]/images/original/logo.png
 
-Weg 2 – CSS:
-- background-image in Header/Nav Elementen
-- Suche nach logo.png, logo.svg, logo.jpg in allen URLs
+## SCHRITT 5 – Bilder herunterladen (KONTEXTBEWUSST)
+WICHTIG: Jedes Bild muss mit seinem Kontext gespeichert werden!
 
-Weg 3 – Direkte URL-Versuche:
-- [domain]/logo.png
-- [domain]/logo.svg
-- [domain]/logo.jpg
-- [domain]/images/logo.png
-- [domain]/img/logo.png
-- [domain]/assets/logo.png
-- [domain]/wp-content/uploads/
-- [domain]/favicon.ico als letzter Fallback
-
-Lade Logo → /fertig/[projektname]/images/original/logo.png
-Falls nicht gefunden: in report.md dokumentieren
-
-### Schritt 5 – Bilder herunterladen
-Extrahiere ALLE Bild-URLs aus raw_crawl.json:
-
-Suche in:
-- Alle <img src="..."> Tags
-- CSS background-image: url(...)
-- srcset Attribute
-- data-src (lazy loading)
-- og:image Meta Tags
-- Twitter Card Bilder
-- Hintergrundbilder in Style-Attributen
-
-Lade herunter → /fertig/[projektname]/images/original/
-- Benenne sinnvoll: hero.jpg, team-1.jpg, service-1.jpg
-- Filtere: alles unter 10kb, Tracking-Pixel, externe Icons
-- Logo separat (Schritt 4)
+Für jedes Bild auf der alten Website:
+- Auf welcher Seite war es? (URL)
+- In welcher Sektion? (Hero, Team, Leistung, Galerie...)
+- Welcher Text stand daneben?
+- Was zeigt das Bild?
 
 Erstelle image_map.json:
 {
-  "logo": "images/original/logo.png",
-  "hero": "images/original/hero.jpg",
-  "team": [],
+  "logo": {
+    "datei": "original/logo.png",
+    "kontext": "Header Logo"
+  },
+  "hero": {
+    "datei": "original/hero.jpg", 
+    "kontext": "Startseite Hero Banner",
+    "original_seite": "/",
+    "original_sektion": "header"
+  },
+  "team": [
+    {
+      "datei": "original/team-laszlo.jpg",
+      "kontext": "Inhaber Laszlo Hun",
+      "original_seite": "/ueber-uns",
+      "original_sektion": "team"
+    }
+  ],
   "leistungen": [],
   "galerie": [],
   "sonstige": []
 }
 
-Erstelle /fertig/[projektname]/images/kunde/README.md:
-"Kundenbilder hier ablegen. Gleiche Dateinamen
-wie in image_map.json. Diese ersetzen die 
-automatisch heruntergeladenen Bilder."
+Lade alle Bilder herunter → /fertig/[projekt]/images/original/
+Filter: unter 10kb, Tracking-Pixel, externe Icons weglassen
 
-### Schritt 6 – Daten normalisieren
+## SCHRITT 6 – Daten normalisieren
 {
   "firma": "",
   "slogan": "",
@@ -212,58 +185,77 @@ automatisch heruntergeladenen Bilder."
     "plz": ""
   },
   "oeffnungszeiten": "",
-  "bilder": {
-    "logo": "",
-    "hero": "",
-    "team": [],
-    "leistungen": []
-  },
+  "bilder": "[Verweis auf image_map.json]",
   "farben": "[Verweis auf farben.json]",
   "kundenstimmen": [],
   "social_media": {},
   "impressum_vorhanden": false,
   "datenschutz_vorhanden": false
 }
-Speichere → /fertig/[projektname]/normalized_data.json
 
-### Schritt 7 – Template auswählen
-Vergleiche Branche, Stil und Struktur mit allen meta.json:
+## SCHRITT 7 – Template auswählen
+Bewertung (0-100):
+- Branche passt: 40 Punkte
+- Seitenstruktur ähnlich: 30 Punkte  
+- Stil passend: 20 Punkte
+- Erweiterbar: 10 Punkte
 
-Bewertungskriterien:
-- Branche passt? (40 Punkte)
-- Seitenstruktur ähnlich? (30 Punkte)
-- Stil passend? (20 Punkte)
-- Erweiterbar für fehlende Seiten? (10 Punkte)
+Alle Scores in report.md dokumentieren.
 
-Wähle Template mit höchstem Score.
-Dokumentiere Scores aller Templates in report.md.
+## SCHRITT 8 – Template befüllen UND anpassen
 
-### Schritt 8 – Template befüllen UND erweitern
-Kopiere gewähltes Template → /fertig/[projektname]/website/
+### A) BILDER EINBAUEN (STRENGE REGELN):
+❌ VERBOTEN: KI-generierte Bilder, Stock-Fotos,
+   Unsplash, Placeholder-Dienste
+✅ ERLAUBT: Nur Bilder aus /images/original/
 
-A) BEFÜLLEN:
-- Ersetze alle Text-Platzhalter mit echten Kundendaten
-- Ersetze alle Bild-Referenzen mit Pfaden aus image_map.json
-- Passe CSS-Variablen und tailwind.config.ts mit farben.json an
-- Logo in Header, Footer und Favicon einbauen
-- Generiere Impressum und Datenschutz aus Kontaktdaten
+Wenn kein passendes Bild vorhanden:
+<div class="image-placeholder" style="
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  border-radius: 8px;
+  padding: 20px;
+">
+  <p style="color: #999; text-align: center;">
+    📷 Platzhalter<br/>
+    <small>[Was hier hin soll]</small>
+  </p>
+</div>
 
-B) ERWEITERN – für jede Seite in "seiten_fehlend_im_template":
-- Analysiere den Stil der bestehenden Template-Komponenten
-- Erstelle neue Komponente im GLEICHEN Stil und gleicher 
-  Technologie (React/TypeScript/Tailwind)
-- Nutze gleiche CSS-Variablen, gleiche Abstände, 
-  gleiche Animationen wie das Template
-- Füge neue Seite in Navigation ein
-- Befülle direkt mit echten Kundendaten
+Bilder KONTEXTBEWUSST platzieren:
+- Team-Bild → Team-Sektion
+- Hero-Bild → Hero-Sektion  
+- Leistungsbild → jeweilige Leistungsseite
+- NICHT: Fahrzeugbild in Team-Sektion packen!
 
-Beispiel: Template hat keine Galerie-Seite aber alte 
-Website hatte eine → erstelle Galerie-Komponente im 
-Template-Stil mit den heruntergeladenen Bildern.
+### B) SEITEN ANPASSEN:
+Seiten aus seiten_analyse.json "hinzufuegen":
+- Neue Komponente im exakten Template-Stil erstellen
+- Gleiche CSS-Variablen, Abstände, Animationen
+- Echte Inhalte von alter Website
+- In Navigation einfügen
 
-### Schritt 9 – GitHub Pages vorbereiten
-Erstelle /fertig/[projektname]/website/vite.config.ts:
+Seiten aus seiten_analyse.json "entfernen":
+- Komponente löschen
+- Aus Navigation entfernen
+- Aus Router entfernen
 
+### C) FARBEN UND LOGO:
+- CSS-Variablen mit farben.json überschreiben
+- tailwind.config.ts anpassen
+- Logo in Header, Footer, Favicon
+
+### D) IMPRESSUM & DATENSCHUTZ:
+Immer generieren aus Kontaktdaten – auch wenn
+auf der alten Website nicht vorhanden (Pflicht!)
+
+## SCHRITT 9 – GitHub Pages vorbereiten
+
+### Vite Config:
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -272,103 +264,53 @@ export default defineConfig({
   base: '/[projektname]/',
 })
 
-Erstelle /fertig/[projektname]/website/.github/workflows/deploy.yml:
+### TanStack Projekte konvertieren:
+Falls Template TanStack Router nutzt:
+1. Entferne @tanstack/react-router
+2. Füge react-router-dom hinzu
+3. Konvertiere createFileRoute → normale Komponenten
+4. Erstelle App.tsx mit BrowserRouter + Routes
+5. Erstelle main.tsx mit ReactDOM.createRoot
 
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [main]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: npm install
-      - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+### Deploy Workflow:
+Erstelle .github/workflows/deploy-all.yml
+mit Node.js 24 (nicht 20!):
+  - uses: actions/checkout@v4
+  - uses: actions/setup-node@v4
+    with:
+      node-version: 24
 
-Erstelle /fertig/[projektname]/github_pages_setup.md:
-Schritte um die Website live zu schalten:
-1. fertig/[projektname]/website/ als eigenes GitHub Repo pushen
-2. Repo Settings → Pages → Source: gh-pages Branch
-3. Link: https://jakobiak66.github.io/[projektname]/
+## SCHRITT 10 – Build testen (PFLICHT)
+cd fertig/[projektname]/website
+npm install
+npm run build
 
-### Schritt 10 – Cost & Quality Report
-Erstelle /fertig/[projektname]/cost_report.json:
-{
-  "datum": "",
-  "projektname": "",
-  "url": "",
-  "firecrawl": {
-    "seiten_gecrawlt": 0,
-    "kosten_usd": 0.00,
-    "dauer_sekunden": 0
-  },
-  "bilder": {
-    "gefunden": 0,
-    "heruntergeladen": 0,
-    "gefiltert": 0,
-    "logo_gefunden": true,
-    "gesamt_groesse_mb": 0.00
-  },
-  "farben": {
-    "gefunden": 0,
-    "quelle": "",
-    "uebertragen": true
-  },
-  "seiten": {
-    "alte_website": 0,
-    "template_original": 0,
-    "neu_erstellt": 0,
-    "gesamt_final": 0
-  },
-  "anthropic": {
-    "input_tokens": 0,
-    "output_tokens": 0,
-    "kosten_usd": 0.00
-  },
-  "gesamt_kosten_usd": 0.00,
-  "qualitaet": {
-    "score": 0,
-    "felder_gefunden": [],
-    "felder_fehlend": [],
-    "seiten_generiert": [],
-    "bilder_fehlend": [],
-    "farben_uebertragen": []
-  }
-}
+Falls Fehler: SOFORT fixen bevor nächste Website.
+dist/index.html muss existieren!
 
-Erstelle /fertig/[projektname]/report.md
+## SCHRITT 11 – Report erstellen
+Erstelle /fertig/[projektname]/report.md:
+- Template gewählt + Begründung + Scores
+- Bilder: heruntergeladen / Platzhalter gesetzt
+- Seiten: hinzugefügt / entfernt
+- Farben übernommen
+- Was der Kunde noch liefern muss
+- Kosten
 
-### Schritt 11 – Prozess selbst analysieren
-Nach jedem abgeschlossenen Projekt:
+Erstelle /fertig/[projektname]/cost_report.json
 
-Analysiere was gut/schlecht lief:
-- Welche Daten konnten nicht extrahiert werden und warum?
-- Welche Schritte haben am längsten gedauert?
-- Wo waren die größten Datenlücken?
-- Was hätte den Prozess schneller/besser gemacht?
-- Welche Website-Typen funktionieren gut/schlecht?
-
-Aktualisiere /PROZESS_OPTIMIERUNG.md:
-- Füge neue Erkenntnisse hinzu
-- Dokumentiere Muster die du erkannt hast
-- Schlage konkrete Verbesserungen für CLAUDE.md vor
-- Notiere welche Website-Typen besondere Behandlung brauchen
+## SCHRITT 12 – Prozess optimieren
+Nach jedem Projekt PROZESS_OPTIMIERUNG.md updaten:
+- Was lief gut/schlecht?
+- Welche Website-Typen brauchen besondere Behandlung?
+- Verbesserungsvorschläge für diesen Prompt
 
 ## Wichtige Hinweise
-- Projektordner immer aus Domain ableiten
-- Schritt 0 nur einmal ausführen (wenn meta.json fehlt)
-- Farben mit Fallback – nie ohne Farben weitermachen
-- Logo alle 3 Wege versuchen
-- Neue Seiten IMMER im Template-Stil bauen
-- GitHub Pages Config immer erstellen
-- PROZESS_OPTIMIERUNG.md nach jedem Projekt updaten
-- Bei Fehlern: weitermachen und dokumentieren
-- Kosten pro Projekt UND gesamt tracken
+- .gitignore VOR allem anderen erstellen
+- raw_crawl.json NIE ins Git (enthält fremde API-Tokens)
+- KI-Bilder sind VERBOTEN – lieber Platzhalter
+- Bilder KONTEXTBEWUSST platzieren
+- TanStack immer zu react-router-dom konvertieren
+- Build MUSS lokal erfolgreich sein vor Push
+- Node.js 24 in GitHub Actions verwenden
+- Kosten pro Projekt und gesamt tracken

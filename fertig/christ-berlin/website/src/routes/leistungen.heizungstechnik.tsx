@@ -2,13 +2,6 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { LeistungCta } from "@/components/site/LeistungCta";
 import { ExternalLink } from "lucide-react";
-import heizungstechnikHero from "@/assets/heizungstechnik-hero.png";
-import heizungstechnik1 from "@/assets/heizungstechnik-fussbodenheizung.png";
-import heizungstechnik2 from "@/assets/heizungstechnik-2.png";
-import heizungstechnik3 from "@/assets/heizungstechnik-3.png";
-import heizungstechnik4 from "@/assets/heizungstechnik-waermepumpe.png";
-
-
 
 const leistungen = [
   "Neuinstallation und Modernisierung",
@@ -25,14 +18,13 @@ export default function Page() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero / Intro */}
         <section className="bg-background py-16 md:py-24">
           <div className="container-page grid md:grid-cols-2 gap-10 md:gap-14 items-stretch">
             <div>
               <span className="inline-flex items-center gap-2 bg-brand/10 text-brand text-xs font-semibold px-3 py-1 rounded-full mb-6">
                 Leistung
               </span>
-              <h1 className="text-ink">Heizungstechnik</h1>
+              <h1 className="text-ink">Heizungsinstallation</h1>
               <p className="mt-4 text-xl md:text-2xl font-semibold text-brand">
                 Energiesparende Wohlfühlräume.
               </p>
@@ -52,7 +44,6 @@ export default function Page() {
                 </p>
               </div>
 
-              {/* Brötje Partner-Hinweis */}
               <p className="mt-6 text-sm text-muted-foreground">
                 <span className="font-semibold text-ink">Partner:</span>{" "}
                 <a
@@ -66,19 +57,17 @@ export default function Page() {
               </p>
             </div>
 
-            {/* Hauptbild */}
             <div className="relative w-full h-full min-h-[360px] md:min-h-[480px] rounded-lg overflow-hidden border border-border bg-card shadow-card">
               <img
-                src={heizungstechnikHero}
-                alt="Mitarbeiter der Dipl.-Ing. Alexander Christ GmbH bei der Wartung einer Gastherme"
-                className="absolute inset-0 w-full h-full object-cover"
+                src="/christ-berlin/images/heizung.png"
+                alt="Heizungsinstallation – Dipl.-Ing. Alexander Christ GmbH"
+                className="absolute inset-0 w-full h-full object-contain p-8"
                 loading="lazy"
               />
             </div>
           </div>
         </section>
 
-        {/* Leistungen + Bildergalerie */}
         <section className="py-16 md:py-20 bg-muted/30">
           <div className="container-page grid lg:grid-cols-2 gap-12 items-start">
             <div>
@@ -86,45 +75,22 @@ export default function Page() {
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Von der Planung bis zur Wartung – wir sorgen für zuverlässige Wärme in Ihrem Zuhause.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Ob Neuinstallation oder Modernisierung einer bestehenden Anlage – wir realisieren Etagen- und Zentralheizungen ebenso wie Fußboden- und Wandflächenheizungen. Beim Einbau von Wärmepumpen sowie Gas- und Öl-Brennwerttechnik setzen wir auf bewährte Technologie und sorgfältige Ausführung. Ergänzend planen und installieren wir Lüftungsanlagen und stehen Ihnen auch nach der Inbetriebnahme mit Wartung und Reparatur zuverlässig zur Seite.
-              </p>
+              <ul className="space-y-3">
+                {leistungen.map((l) => (
+                  <li key={l} className="flex items-start gap-3 bg-card border border-border/50 rounded-md px-4 py-3 shadow-sm">
+                    <span className="mt-0.5 w-6 h-6 rounded-full bg-brand/10 text-brand flex items-center justify-center shrink-0 text-sm font-bold">✓</span>
+                    <span className="font-medium">{l}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {/* Bildergalerie – Platzhalter */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-square rounded-lg overflow-hidden border border-border bg-card shadow-card">
-                <img
-                  src={heizungstechnik1}
-                  alt="Christ-Mitarbeiter bei der Verlegung einer Fußbodenheizung"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="aspect-square rounded-lg overflow-hidden border border-border bg-card shadow-card">
-                <img
-                  src={heizungstechnik3}
-                  alt="Moderner Heizungsraum mit Brennwertkesseln und Pufferspeicher, installiert von Christ"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="aspect-square rounded-lg overflow-hidden border border-border bg-card shadow-card">
-                <img
-                  src={heizungstechnik2}
-                  alt="Moderner Heizungsraum mit Brennwertgeräten, Verteilern und Pufferspeicher, installiert von Christ"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="aspect-square rounded-lg overflow-hidden border border-border bg-card shadow-card">
-                <img
-                  src={heizungstechnik4}
-                  alt="Christ-Mitarbeiter bei der Installation einer Wärmepumpe vor einem Wohnhaus"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+              {["Heizungsanlage – Foto folgt", "Wärmepumpe – Foto folgt", "Fußbodenheizung – Foto folgt", "Heizungsraum – Foto folgt"].map((label) => (
+                <div key={label} className="aspect-square rounded-lg overflow-hidden border border-border bg-[#f0f0f0] border-2 border-dashed border-[#ccc] flex items-center justify-center p-3">
+                  <p className="text-[#999] text-center text-xs">📷 Platzhalter<br /><small>{label}</small></p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -133,7 +99,6 @@ export default function Page() {
           headline="Zeit für moderne Heiztechnik?"
           subline="Kostenlose Beratung zu Wärmepumpe, Brennwert & Co. – persönlich vor Ort in Berlin."
         />
-        
       </main>
       <Footer />
     </div>

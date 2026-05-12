@@ -1,11 +1,11 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Star, Send } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import about from "@/assets/about-plumber.jpg";
+
 
 const problems = ["Rohrbruch", "Verstopfung", "Heizung", "Toilette", "Boiler", "Armatur", "Sonstiges"];
 
@@ -14,15 +14,15 @@ export const ContactForm = () => {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Anfrage gesendet!", description: "Wir rufen Sie innerhalb von 5 Minuten zurück." });
+    toast({ title: "Anfrage gesendet!", description: "Wir rufen Sie innerhalb von 5 Minuten zurÃ¼ck." });
   };
 
   return (
     <section id="kontakt" className="py-16 bg-surface border-b border-border scroll-mt-32">
       <div className="container">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Rückruf in 5 Minuten – garantiert.</h2>
-          <p className="mt-3 text-muted-foreground">Kurz Daten eingeben – wir melden uns sofort.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">RÃ¼ckruf in 5 Minuten â€“ garantiert.</h2>
+          <p className="mt-3 text-muted-foreground">Kurz Daten eingeben â€“ wir melden uns sofort.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <form onSubmit={onSubmit} className="rounded-2xl bg-card border border-border p-6 shadow-card space-y-4">
@@ -58,24 +58,24 @@ export const ContactForm = () => {
               </div>
             </div>
             <Button type="submit" size="lg" className="w-full gap-2 shadow-cta">
-              <Send className="h-4 w-4" /> Jetzt zurückrufen lassen
+              <Send className="h-4 w-4" /> Jetzt zurÃ¼ckrufen lassen
             </Button>
             <p className="text-xs text-muted-foreground text-center">
-              Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer Datenschutzerklärung zu.
+              Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemÃ¤ÃŸ unserer DatenschutzerklÃ¤rung zu.
             </p>
           </form>
           <div className="rounded-2xl bg-card border border-border p-6 shadow-card">
             <div className="flex items-center gap-4">
-              <img src={about} alt="Bernd Lindner" loading="lazy" width={64} height={64} className="h-16 w-16 rounded-full object-cover" />
+              <img src="/sehrfit/images/FitGeraete01.jpg" alt="Bernd Lindner" loading="lazy" width={64} height={64} className="h-16 w-16 rounded-full object-cover" />
               <div>
                 <div className="font-bold text-foreground">Bernd Lindner</div>
-                <div className="text-sm text-muted-foreground">Inhaber & Sanitär-Meister</div>
+                <div className="text-sm text-muted-foreground">Inhaber & SanitÃ¤r-Meister</div>
               </div>
             </div>
             <div className="mt-6 grid grid-cols-3 gap-3 text-center">
               {[
                 { v: "15+", l: "Jahre" },
-                { v: "8000+", l: "Aufträge" },
+                { v: "8000+", l: "AuftrÃ¤ge" },
                 { v: "4.9", l: "Bewertung" },
               ].map((s) => (
                 <div key={s.l} className="rounded-xl bg-surface border border-border p-3">
@@ -86,13 +86,13 @@ export const ContactForm = () => {
             </div>
             <div className="mt-5 flex items-center gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-accent text-accent" />)}
-              <span className="ml-2 text-sm text-muted-foreground">basierend auf über 200 Bewertungen</span>
+              <span className="ml-2 text-sm text-muted-foreground">basierend auf Ã¼ber 200 Bewertungen</span>
             </div>
             <ul className="mt-5 space-y-2 text-sm text-foreground">
-              <li>✓ Kostenlose Erstberatung am Telefon</li>
-              <li>✓ Antwort innerhalb von 5 Minuten</li>
-              <li>✓ Festpreis vor Auftragsannahme</li>
-              <li>✓ Sauberes Arbeiten – garantiert</li>
+              <li>âœ“ Kostenlose Erstberatung am Telefon</li>
+              <li>âœ“ Antwort innerhalb von 5 Minuten</li>
+              <li>âœ“ Festpreis vor Auftragsannahme</li>
+              <li>âœ“ Sauberes Arbeiten â€“ garantiert</li>
             </ul>
           </div>
         </div>
@@ -100,3 +100,4 @@ export const ContactForm = () => {
     </section>
   );
 };
+

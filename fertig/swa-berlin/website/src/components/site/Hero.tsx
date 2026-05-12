@@ -1,14 +1,14 @@
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-heizung-sanitaer.png";
 
 export function Hero() {
   return (
-    <section className="relative isolate min-h-[760px] md:min-h-[760px] flex items-center pt-20 pb-24 md:pt-16 md:pb-20 overflow-hidden bg-ink">
-      <img
-        src={heroImage}
-        alt="SWA Berlin GmbH – TGA-Monteure bei der Arbeit"
-        className="absolute inset-0 w-full h-full object-cover object-[0%_center] md:object-[20%_center]"
-      />
+    <section className="relative isolate min-h-[500px] flex items-center pt-20 pb-24 md:pt-16 md:pb-20 overflow-hidden bg-ink">
+      <div className="absolute inset-0 bg-[#f0f0f0] border-b-2 border-dashed border-[#ccc] flex items-center justify-center">
+        <p className="text-[#999] text-center text-sm">
+          📷 Platzhalter<br />
+          <small>Hero-Banner – bitte Firmenfoto einsenden</small>
+        </p>
+      </div>
       <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/60 to-ink/30" />
 
       <div className="container-page relative text-white">
@@ -26,24 +26,7 @@ export function Hero() {
           </p>
 
           <div className="mt-10 md:mt-8 flex items-center gap-4 justify-center md:justify-start">
-            <div className="flex -space-x-3">
-              {[
-                "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=facearea&facepad=3&w=80&h=80&q=80",
-                "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=facearea&facepad=3&w=80&h=80&q=80",
-                "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=facearea&facepad=3&w=80&h=80&q=80",
-              ].map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt=""
-                  className="w-12 h-12 rounded-full border-2 border-white object-cover"
-                />
-              ))}
-              <div className="w-12 h-12 rounded-full border-2 border-white bg-brand text-white text-sm font-bold flex items-center justify-center">
-                4,8
-              </div>
-            </div>
-            <div className="text-sm text-white">
+            <div className="text-sm text-white bg-white/20 px-4 py-2 rounded-lg">
               <div className="font-semibold">Seit April 2020</div>
               <div className="text-white/85">Ihr Haustechnik-Partner in Berlin</div>
             </div>

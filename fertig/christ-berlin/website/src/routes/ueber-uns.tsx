@@ -2,10 +2,6 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBanner } from "@/components/site/CtaBanner";
-import teamPhoto from "@/assets/team-hlr.png";
-import heroBg from "@/assets/hero-heizung-sanitaer.png";
-
-
 
 export default function UeberUnsPage() {
   return (
@@ -14,23 +10,17 @@ export default function UeberUnsPage() {
       <main className="flex-1">
         <PageHero
           title="Über uns"
-          backgroundImage={heroBg}
-          backgroundAlt="Gebäudetechnik-Fachbetrieb in Berlin"
-          overlayOpacity={55}
+          variant="geometric"
         />
 
         <section className="pt-16 md:pt-24 pb-8 md:pb-10 bg-background">
           <div className="container-page">
             <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start">
-              <div className="rounded-md overflow-hidden shadow-card-lg md:sticky md:top-24">
-                <img
-                  src={teamPhoto}
-                  alt="Das Team der Dipl.-Ing. Alexander Christ GmbH"
-                  width={1600}
-                  height={1024}
-                  loading="lazy"
-                  className="w-full h-auto object-cover aspect-[4/3]"
-                />
+              <div className="rounded-md overflow-hidden shadow-card-lg md:sticky md:top-24 bg-[#f0f0f0] border-2 border-dashed border-[#ccc] min-h-[300px] flex items-center justify-center p-8">
+                <p className="text-[#999] text-center text-sm">
+                  📷 Platzhalter<br />
+                  <small>Teamfoto – bitte Firmenfoto einsenden</small>
+                </p>
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-brand font-semibold">

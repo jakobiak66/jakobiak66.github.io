@@ -19,6 +19,8 @@ const leistungen = [
 
 const nav = [
   { label: "Über uns", to: "/ueber-uns" },
+  { label: "Beispiele", to: "/beispiele" },
+  { label: "Zertifikate", to: "/zertifikate" },
   { label: "Kontakt", to: "/kontakt" },
   { label: "Karriere", to: "/karriere" },
 ];
@@ -76,6 +78,12 @@ export const Header = () => {
 
             <Link to="/kontakt" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">
               Kontakt
+            </Link>
+            <Link to="/beispiele" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">
+              Beispiele
+            </Link>
+            <Link to="/zertifikate" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">
+              Zertifikate
             </Link>
             <Link to="/karriere" className="text-sm font-medium text-foreground/80 hover:text-primary transition-smooth">
               Karriere

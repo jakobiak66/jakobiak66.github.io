@@ -1,6 +1,5 @@
 import { Flame, Droplets, Wind, Thermometer, Wrench, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import familieImg from "@/assets/familie-leistungen.png";
 
 const items = [
   {
@@ -79,11 +78,11 @@ export function Services() {
           </div>
         </div>
 
-        {/* Right: full-bleed image with CTA */}
+        {/* Right: reference project image */}
         <div className="relative min-h-[320px] lg:min-h-[480px] rounded-lg overflow-hidden">
           <img
-            src={familieImg}
-            alt="TGA-Profis der SWA Berlin GmbH bei der Arbeit"
+            src="/swa-berlin/images/referenz-energiemanagement.png"
+            alt="SWA Berlin Referenzprojekt – Energiemanagement Pankstraße"
             className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
           />

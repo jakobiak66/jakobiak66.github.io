@@ -7,8 +7,10 @@ import Datenschutz from "./routes/datenschutz";
 import Heizungstechnik from "./routes/leistungen.heizungstechnik";
 import BadSanitaer from "./routes/leistungen.bad-und-sanitaerinstallation";
 import Solartechnik from "./routes/leistungen.solartechnik";
-import Wasseraufbereitung from "./routes/leistungen.wasseraufbereitung";
-import Wohnraumlueftung from "./routes/leistungen.wohnraumlueftung";
+import Schornsteinbau from "./routes/leistungen.schornsteinbau";
+import Kamine from "./routes/leistungen.kamine";
+import Energieberatung from "./routes/leistungen.energieberatung";
+import Regenwassernutzung from "./routes/leistungen.regenwassernutzung";
 
 export default function App() {
   return (
@@ -22,8 +24,10 @@ export default function App() {
         <Route path="/leistungen/heizungstechnik" element={<Heizungstechnik />} />
         <Route path="/leistungen/bad-und-sanitaerinstallation" element={<BadSanitaer />} />
         <Route path="/leistungen/solartechnik" element={<Solartechnik />} />
-        <Route path="/leistungen/wasseraufbereitung" element={<Wasseraufbereitung />} />
-        <Route path="/leistungen/wohnraumlueftung" element={<Wohnraumlueftung />} />
+        <Route path="/leistungen/schornsteinbau" element={<Schornsteinbau />} />
+        <Route path="/leistungen/kamine" element={<Kamine />} />
+        <Route path="/leistungen/energieberatung" element={<Energieberatung />} />
+        <Route path="/leistungen/regenwassernutzung" element={<Regenwassernutzung />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>

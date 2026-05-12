@@ -1,37 +1,41 @@
-import { Flame, Droplets, Wind, Sun, Waves, ArrowRight } from "lucide-react";
+import { Flame, Droplets, Zap, Sun, Droplet, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import familieImg from "@/assets/familie-leistungen.png";
 
 const items = [
   {
     icon: Flame,
-    title: "Heizungstechnik",
-    desc: "Energiesparende Wohlfühlräume durch moderne Heiz- und Brennwerttechnik.",
+    title: "Heizungsinstallation",
+    desc: "Neuinstallation und Modernisierung von Heizungsanlagen, Wärmepumpen und Brennwerttechnik.",
     href: "/leistungen/heizungstechnik",
+    img: "/christ-berlin/images/heizung.png",
   },
   {
     icon: Droplets,
-    title: "Bad & Sanitär",
+    title: "Sanitärinstallation",
     desc: "Vom Komplettbad bis zur Reparatur – Komfort und Funktion aus einer Hand.",
     href: "/leistungen/bad-und-sanitaerinstallation",
-  },
-  {
-    icon: Wind,
-    title: "Wohnraumlüftung",
-    desc: "Frische, gefilterte Luft mit bis zu 90 % Wärmerückgewinnung.",
-    href: "/leistungen/wohnraumlueftung",
+    img: "/christ-berlin/images/sanitaer.png",
   },
   {
     icon: Sun,
-    title: "Solartechnik",
-    desc: "Photovoltaik & Solarthermie – emissionsschonend und wirtschaftlich.",
+    title: "Solar- & Photovoltaik",
+    desc: "Solarthermie und Photovoltaikanlagen – emissionsschonend und wirtschaftlich.",
     href: "/leistungen/solartechnik",
+    img: "/christ-berlin/images/solaranlagen.png",
   },
   {
-    icon: Waves,
-    title: "Wasseraufbereitung",
-    desc: "Enthärtung und Filtration für sauberes, weiches Wasser im ganzen Haus.",
-    href: "/leistungen/wasseraufbereitung",
+    icon: Zap,
+    title: "Schornsteinbau",
+    desc: "Fachgerechter Schornsteinbau und Sanierung für sicheren Betrieb Ihrer Feuerstätte.",
+    href: "/leistungen/schornsteinbau",
+    img: "/christ-berlin/images/schornsteinbau.png",
+  },
+  {
+    icon: Droplet,
+    title: "Energieberatung",
+    desc: "Individuelle Beratung zu Energieeinsparung, Fördermitteln und modernen Heiztechnologien.",
+    href: "/leistungen/energieberatung",
+    img: "/christ-berlin/images/energieberatung.png",
   },
 ];
 
@@ -79,14 +83,22 @@ export function Services() {
           </div>
         </div>
 
-        {/* Right: full-bleed image with CTA */}
-        <div className="relative min-h-[320px] lg:min-h-[480px] rounded-lg overflow-hidden">
-          <img
-            src={familieImg}
-            alt="Familie genießt modernes Zuhause mit smarter Heizungssteuerung"
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="lazy"
-          />
+        {/* Right: service icons grid */}
+        <div className="grid grid-cols-3 gap-4 content-start">
+          {items.map((it) => (
+            <div key={it.title} className="flex flex-col items-center gap-2 bg-brand/20 rounded-lg p-4">
+              <img src={it.img} alt={it.title} className="w-16 h-16 object-contain" />
+              <span className="text-white/90 text-xs font-semibold text-center">{it.title}</span>
+            </div>
+          ))}
+          <div className="flex flex-col items-center gap-2 bg-brand/20 rounded-lg p-4">
+            <div className="w-16 h-16 flex items-center justify-center text-white/60 text-2xl">🏠</div>
+            <span className="text-white/90 text-xs font-semibold text-center">Kamine</span>
+          </div>
+          <div className="flex flex-col items-center gap-2 bg-brand/20 rounded-lg p-4">
+            <div className="w-16 h-16 flex items-center justify-center text-white/60 text-2xl">💧</div>
+            <span className="text-white/90 text-xs font-semibold text-center">Regenwassernutzung</span>
+          </div>
         </div>
       </div>
     </section>

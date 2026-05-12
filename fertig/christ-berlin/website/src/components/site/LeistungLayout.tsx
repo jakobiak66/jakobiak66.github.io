@@ -12,8 +12,8 @@ type Props = {
   titleClassName?: string;
   subtitle?: string;
   paragraphs: string[];
-  heroImage: string;
-  heroImageAlt: string;
+  heroImage?: string;
+  heroImageAlt?: string;
   leistungen: string[];
   leistungenIntro?: string;
   leistungenText?: string | string[];
@@ -60,12 +60,21 @@ export function LeistungLayout({
 
             {/* Hauptbild – Mobile: nach Subline, Desktop: rechte Spalte */}
             <div className="relative w-full h-64 sm:h-80 md:h-full md:min-h-[480px] rounded-lg overflow-hidden border border-border bg-card shadow-card md:order-2 md:row-span-2">
-              <img
-                src={heroImage}
-                alt={heroImageAlt}
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
-              />
+              {heroImage ? (
+                <img
+                  src={heroImage}
+                  alt={heroImageAlt ?? title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="absolute inset-0 bg-[#f0f0f0] border-2 border-dashed border-[#ccc] flex items-center justify-center p-5">
+                  <p className="text-[#999] text-center text-sm">
+                    📷 Platzhalter<br />
+                    <small>Foto: {title}</small>
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Lange Textabsätze – Mobile: nach Bild, Desktop: unter Überschrift in linker Spalte */}
@@ -119,12 +128,21 @@ export function LeistungLayout({
                   key={i}
                   className="aspect-square rounded-lg overflow-hidden border border-border bg-card shadow-card"
                 >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
+                  {img.src ? (
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-[#f0f0f0] border-2 border-dashed border-[#ccc] flex items-center justify-center p-3">
+                      <p className="text-[#999] text-center text-xs">
+                        📷 Platzhalter<br />
+                        <small>{img.alt}</small>
+                      </p>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

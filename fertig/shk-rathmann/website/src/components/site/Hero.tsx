@@ -1,7 +1,5 @@
 import { CheckCircle2, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroPlumber from "@/assets/hero-plumber.jpg";
-import heroWorker from "@/assets/hero-worker.jpg";
 
 export const Hero = () => {
   return (
@@ -50,15 +48,14 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Right images */}
+        {/* Right images - real shk-rathmann images */}
         <div className="relative grid grid-cols-2 gap-4 h-[420px] sm:h-[520px]">
           <div className="relative rounded-2xl overflow-hidden shadow-card">
-            <img src={heroPlumber} alt="Sanitär- und Heizungstechniker bei der Arbeit" className="h-full w-full object-cover" width={1024} height={1024} />
+            <img src="/shk-rathmann/images/header-home.jpg" alt="SHK Rathmann – Sanitär und Heizung Berlin" className="h-full w-full object-cover" width={725} height={210} />
           </div>
           <div className="relative rounded-2xl overflow-hidden shadow-card mt-10">
-            <img src={heroWorker} alt="Handwerker mit Rohren in der Werkstatt" loading="lazy" className="h-full w-full object-cover" width={1024} height={1024} />
+            <img src="/shk-rathmann/images/header-heizung.jpg" alt="SHK Rathmann – Heizungsinstallation" loading="lazy" className="h-full w-full object-cover" width={725} height={210} />
           </div>
-          {/* Floating green badge */}
           <div className="absolute -left-6 top-6 h-24 w-24 rounded-full bg-gradient-primary shadow-glow flex items-center justify-center text-primary-foreground text-center text-xs font-bold leading-tight rotate-[-8deg]">
             Meister<br />betrieb
           </div>
